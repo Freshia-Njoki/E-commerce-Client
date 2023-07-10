@@ -11,12 +11,12 @@ function order() {
             </div>
 
             <div className='order'>
-                <h5>System cancel order</h5>
+                <h3>System cancel order</h3>
                 <p>1352463576453 has been canceled by system. if you
                     <br />already paid, please check refund status in account
                 </p>
 
-                <div>
+                <div className='footer'>
                     <p>date</p>
                     <p>time</p>
                 </div>
@@ -24,12 +24,12 @@ function order() {
             </div>
 
             <div className='order'>
-                <h5>System cancel order</h5>
-                <p>1352463576453 has been canceled by system. if you
-                    <br />already paid, please check refund status in account
+                <h3>your goods is still pending</h3>
+                <p>135276453 has been canceled by system. if you
+
                 </p>
 
-                <div>
+                <div className='footer'>
                     <p>date</p>
                     <p>time</p>
                 </div>
@@ -37,12 +37,12 @@ function order() {
             </div>
 
             <div className='order'>
-                <h5>System cancel order</h5>
-                <p>1352463576453 has been canceled by system. if you
-                    <br />already paid, please check refund status in account
+                <h3>order submitted successfully</h3>
+                <p>135246357 has been canceled by system. if you
+
                 </p>
 
-                <div>
+                <div className='footer'>
                     <p>date</p>
                     <p>time</p>
                 </div>

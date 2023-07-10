@@ -1,6 +1,7 @@
 .navbar {
-  margin-left: 2rem;
+  padding-left: 2rem;
   height: 10vh;
+  background-color: white;
 }
 
 .order-page {
@@ -9,5 +10,22 @@
 }
 
 .order {
+  background-color: white;
+  width: 60%;
+  border-radius: 8px;
+  margin: 0.7rem 0rem 0rem 6rem;
+  padding: 0.5rem 1rem 0rem 2rem;
+}
+
+.order p {
+  font-size: 20px;
+  padding: 0.5rem 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px;
+  padding-right: 2rem;
   background-color: white;
 }
