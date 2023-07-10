@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   flex-direction: row;
-  height: 2S0vh;
+  height: 10vh;
   place-items: center;
   gap: 30px;
 }
@@ -27,10 +27,44 @@
 .sidebar {
   background-color: #4e4cc4;
   height: 70vh;
-  margin-top: 2rem;
+
+  margin-top: 1rem;
 }
 
 .menu {
   height: 7vh;
   padding-top: 1rem;
+}
+
+.content {
+  display: flex;
+}
+
+.card p {
+  padding-left: 20px;
+}
+
+.rating {
+  padding-left: 20px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.card {
+  margin-top: 10px;
+  margin-left: 2rem;
+}
+
+.img {
+  width: 300px;
+  height: 180px;
 }
