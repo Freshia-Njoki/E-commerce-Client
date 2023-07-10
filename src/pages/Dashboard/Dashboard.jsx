@@ -1,9 +1,11 @@
-import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
-import { Link } from "react-router-dom"
+import Sidebar from '../../components/Sidebar';
+
 import { BiHelpCircle } from 'react-icons/bi'
 import { FiLogOut } from 'react-icons/fi'
 import './dashboard.css'
 import Card from '../../components/card/card';
+// import Categories from '../../components/Categories/Categories';
+
 
 
 function Dashboard() {
@@ -29,26 +31,7 @@ function Dashboard() {
             <div className='content'>
 
 
-                <Sidebar className='sidebar'>
-                    <Menu menuItemStyles={{
-                        button: {
-                            // the active class will be added automatically by react router
-                            // so we can use it to style the active menu item
-                            [`&.active`]: {
-                                backgroundColor: '#13395e',
-                                color: '#b6c8d9',
-                            },
-                        },
-                    }}>
-
-                        <MenuItem className="menu">QuickBuy </MenuItem>
-                        <MenuItem className="menu" component={<Link to="/categories" />}>Categories </MenuItem>
-                        <MenuItem className="menu" component={<Link to="/order" />}>Order Management </MenuItem>
-                        <MenuItem className="menu" component={<Link to="/cart" />}>Cart </MenuItem>
-                        <MenuItem className="menu" component={<Link to="/Account" />}>Account </MenuItem>
-
-                    </Menu>
-                </Sidebar>
+                <Sidebar />
                 <div className='products'>
 
                     <Card />
@@ -59,7 +42,7 @@ function Dashboard() {
                     <Card />
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

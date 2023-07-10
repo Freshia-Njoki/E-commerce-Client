@@ -1,0 +1,30 @@
+.navbar {
+  height: 10vh;
+  place-items: center;
+}
+
+.navbar h3 {
+  margin: 20px;
+  padding-right: 5rem;
+}
+
+. img {
+  width: 300px;
+  height: 180px;
+}
+
+.card {
+  /* border: 2px solid red; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.description {
+  border: 2px solid red;
+}

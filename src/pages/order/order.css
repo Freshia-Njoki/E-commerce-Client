@@ -1,0 +1,13 @@
+.navbar {
+  margin-left: 2rem;
+  height: 10vh;
+}
+
+.order-page {
+  background-color: #4e4cc4;
+  height: 85vh;
+}
+
+.order {
+  background-color: white;
+}
