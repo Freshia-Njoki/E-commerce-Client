@@ -1,11 +1,7 @@
-import React from 'react';
 import Nav from '../components/Nav';
 import BG from '../assets/BG.jpg';
 
 function Home() {
-    const handleSignIn = () => {
-        // Handle sign-in logic here
-    };
 
     return (
         <div className="home">

@@ -7,6 +7,7 @@ import NotFound from './pages/NotFound/NotFound'
 import Login from './pages/Login/Login'
 import LoginForm from './pages/Admin/LoginForm';
 import Footer from './components/Footer/Footer'
+import Dashboard from './pages/Dashboard/Dashboard';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/logout' element={<Logout />} />
           <Route path='/adminlogin' element={<LoginForm />} />
+          <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/logout' element={<Logout />} />
           <Route path='' element={<NotFound />} />
         </Routes>

@@ -39,7 +39,9 @@ function Login() {
                             <label htmlFor="password">Password</label>
                             <input type="password" id='password' placeholder=''  {...register("password")} />
                             {/* <p>{errors.password?.message}</p> */}
-                            <input className='loginBtn' type="submit" value="Login" />
+                            {/* navigate upon succesful signup-remove link */}
+                            <Link to='/dashboard'><input className='loginBtn' type="submit" value="Login" /></Link>
+
                             <Link to='/signup'><input className='signupBtn' type="submit" value="Sign up" /></Link>
                         </form>
                     </div>
