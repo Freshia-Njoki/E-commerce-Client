@@ -1,0 +1,38 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: border-box;
+    width: 100%;
+}
+
+.home{
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+}
+ 
+.home-wrapper{
+    padding-top: calc(50vh - 200px);
+}
+
+
+
+.home-wrapper {
+    position: relative;
+  }
+  
+  .image-container {
+    position: relative;
+
+  }
+  
+  .sign-in-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /* Add any other styling for the button */
+  }
+  
+  
