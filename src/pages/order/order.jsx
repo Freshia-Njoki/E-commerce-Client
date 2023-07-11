@@ -1,6 +1,5 @@
 import { BsArrowLeftCircle } from 'react-icons/bs'
 import './order.css'
-import { BiFontSize } from 'react-icons/bi'
 
 function order() {
     return (
@@ -16,7 +15,7 @@ function order() {
                     <br />already paid, please check refund status in account
                 </p>
 
-                <div className='footer'>
+                <div className='footer-order'>
                     <p>date</p>
                     <p>time</p>
                 </div>
@@ -29,7 +28,7 @@ function order() {
 
                 </p>
 
-                <div className='footer'>
+                <div className='footer-order'>
                     <p>date</p>
                     <p>time</p>
                 </div>
@@ -42,8 +41,7 @@ function order() {
 
                 </p>
 
-                <div className='footer'>
-                    <p>date</p>
+                <div className='footer-order'>
                     <p>time</p>
                 </div>
 

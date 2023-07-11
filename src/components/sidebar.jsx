@@ -23,7 +23,7 @@ function sidebar() {
                     <MenuItem className="menu" component={<Link to="/categories" />} >Categories </MenuItem>
                     <MenuItem className="menu" component={<Link to="/order" />}>Order Management </MenuItem>
                     <MenuItem className="menu" component={<Link to="/cart" />}>Cart </MenuItem>
-                    <MenuItem className="menu" component={<Link to="/Account" />}>Account </MenuItem>
+                    <MenuItem className="menu" component={<Link to="/account" />}>Account </MenuItem>
 
                 </Menu>
             </Sidebar>

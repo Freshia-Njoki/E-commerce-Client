@@ -4,15 +4,17 @@ import img from '../../assets/img.avif'
 
 function Card() {
     return (
-        <div >
+        <div className='section'>
             <div className="card">
-                <img className='img' src={img} alt="" />
-                <div className="description"><p>product name</p>
-                    <p>price: $55.50</p></div>
-                <div className="rating"> <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiOutlineStar /> </div>
+                <div><img className='img' src={img} alt="" /></div>
 
 
             </div>
+
+
+            <div className="description"><p>product name</p>
+                <p>price: $55.50</p></div>
+            <div className="rating" style={{ marginLeft: "1rem" }}> <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiOutlineStar /> </div>
         </div>
     )
 }

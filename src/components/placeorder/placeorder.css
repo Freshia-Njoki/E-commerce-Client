@@ -1,0 +1,53 @@
+.bg {
+  background-color: #4e4cc4;
+  height: 85vh;
+}
+.p-nav {
+  padding-left: 2rem;
+  height: 8vh;
+  /* background-color: white; */
+  display: flex;
+  padding-top: 5px;
+  align-items: center;
+}
+
+.mini-nav {
+  display: flex;
+  gap: 25rem;
+}
+.shipping-info {
+  background-color: whitesmoke;
+  width: 60%;
+  padding: 1rem;
+  margin-left: 3rem;
+  border-radius: 5px;
+}
+.flex {
+  margin-top: 1rem;
+  display: flex;
+  gap: 50%;
+}
+
+.info {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.edit {
+  display: flex;
+  margin-left: 5rem;
+  flex-direction: row;
+}
+
+.payment {
+  background-color: whitesmoke;
+  width: 60%;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  border-radius: 5px;
+}
+.payment-card {
+  display: flex;
+  gap: 1rem;
+}

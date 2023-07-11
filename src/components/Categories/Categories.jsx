@@ -39,7 +39,7 @@ function Categories() {
                         </Menu>
                     </Sidebar>
                 </div>
-                <div>
+                <div className='section'>
                     <h2 style={{ marginLeft: '2rem' }}>Top Categories</h2>
                     <div className="card">
                         <div className="desciption">

@@ -4,7 +4,6 @@ import { AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai'
 function Footer() {
     const year = new Date().getFullYear()
     return (
-
         <>
             <div className="footer">
                 <div >

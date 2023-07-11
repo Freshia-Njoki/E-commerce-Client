@@ -10,6 +10,8 @@ import Footer from './components/Footer/Footer'
 import Dashboard from './pages/Dashboard/Dashboard';
 import Categories from './components/Categories/Categories';
 import Order from './pages/order/order'
+import Cart from './pages/cart/Cart';
+import PlaceOrder from './components/placeorder/PlaceOrder';
 
 function App() {
 
@@ -27,6 +29,8 @@ function App() {
           <Route path='/categories' element={<Categories />} />
           <Route path='/order' element={<Order />} />
           <Route path='/logout' element={<Logout />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/placeorder' element={<PlaceOrder />} />
           <Route path='' element={<NotFound />} />
         </Routes>
 
