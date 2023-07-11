@@ -1,12 +1,13 @@
 .bg {
   background-color: #4e4cc4;
-  height: 85vh;
+  height: 90vh;
 }
 .p-nav {
   padding-left: 2rem;
   height: 8vh;
-  /* background-color: white; */
+  background-color: white;
   display: flex;
+  margin-bottom: 1rem;
   padding-top: 5px;
   align-items: center;
 }
@@ -17,9 +18,10 @@
 }
 .shipping-info {
   background-color: whitesmoke;
-  width: 60%;
-  padding: 1rem;
-  margin-left: 3rem;
+  width: 70%;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  margin-left: 5rem;
   border-radius: 5px;
 }
 .flex {
@@ -35,19 +37,38 @@
 }
 .edit {
   display: flex;
-  margin-left: 5rem;
+  margin-left: 7rem;
   flex-direction: row;
 }
 
 .payment {
   background-color: whitesmoke;
-  width: 60%;
-  padding: 1rem;
+  width: 70%;
+  padding: 0.5rem;
+  padding-left: 2rem;
   margin-top: 1rem;
-  margin-left: 3rem;
+  margin-left: 5rem;
+  margin-bottom: 1rem;
   border-radius: 5px;
 }
 .payment-card {
   display: flex;
-  gap: 1rem;
+  gap: 15rem;
+  margin: 0.7rem;
+}
+.payment-card2 {
+  display: flex;
+  background-color: white;
+  gap: 40rem;
+  margin: 0.5rem;
+}
+
+.payment-footer {
+  display: flex;
+  padding: 1rem;
+  margin-bottom: 5px;
+  background-color: white;
+  align-items: center;
+  gap: 60%;
+  padding-left: 3rem;
 }
