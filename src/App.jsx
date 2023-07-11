@@ -12,6 +12,7 @@ import Categories from './components/Categories/Categories';
 import Order from './pages/order/order'
 import Cart from './pages/cart/Cart';
 import PlaceOrder from './components/placeorder/PlaceOrder';
+<<<<<<< HEAD
 import AdminLogout from './pages/Admin/AdminLogout/AdminLogout';
 import Marketing from './pages/Admin/Marketing/Marketing'
 import Orders from './pages/Admin/Orders/Orders'
@@ -19,6 +20,8 @@ import Products from './pages/Admin/Products/Products'
 import Rates from './pages/Admin/Rates/Rates'
 import Report from './pages/Admin/Report/Report'
 import AdminDashboard from './pages/Admin/Dashboard/AdminDashboard';
+=======
+>>>>>>> 7593043011adeda939dbdd6b94a063777ec956ee
 
 function App() {
 
@@ -38,6 +41,7 @@ function App() {
           <Route path='/logout' element={<Logout />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/placeorder' element={<PlaceOrder />} />
+<<<<<<< HEAD
           <Route path='/admindashboard' element={<AdminDashboard />} />
           <Route path='/adminlogout' element={<AdminLogout />} />
           <Route path='/marketing' element={<Marketing />} />
@@ -45,6 +49,8 @@ function App() {
           <Route path='/products' element={<Products />} />
           <Route path='/rates' element={<Rates />} />
           <Route path='/report' element={<Report />} />
+=======
+>>>>>>> 7593043011adeda939dbdd6b94a063777ec956ee
           <Route path='' element={<NotFound />} />
         </Routes>
 
