@@ -1,18 +1,25 @@
 .report-content {
   background-color: #4e4cc4;
   width: 100%;
+  height: 70vh;
   border-radius: 3px;
   gap: 3rem;
+  display: flex;
+  flex-direction: row;
   padding-left: 5rem;
   margin: 0.2rem;
   color: white;
 }
 
-.flex {
-  display: flex;
-  flex-direction: row;
+.cards {
+  color: black;
+  margin: 3rem;
+}
+.sales {
+  padding: 7rem;
 }
 
-.rate {
-  color: black;
+.reviews {
+  margin: 2rem;
+  margin-left: 10rem;
 }

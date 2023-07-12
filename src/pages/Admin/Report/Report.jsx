@@ -29,21 +29,22 @@ function Report() {
 
                 <div>
                     <div className="sales">graph</div>
-                    <div> <span className='cards'>Comments:</span>
+                    <div> <h4>Comments:</h4>
                         <span className='cards'></span>
                     </div>
                 </div>
 
-                <div>
-                    <h5>Reviews</h5>
+                <div className='reviews'>
+                    <h3>Reviews</h3>
                     <div className="flex">
-                        <h4>Ratings</h4>
+
                         <span className='cards'>Comments</span>
 
                     </div>
                     <div>
-                        <span className='cards'>Monthly Revenue:</span>
-                        ksh:____
+                        <h5>Monthly Revenue:</h5>
+                        <span className='cards'>ksh:____</span>
+
                     </div>
                 </div>
             </div>
