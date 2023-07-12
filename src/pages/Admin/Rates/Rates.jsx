@@ -1,6 +1,7 @@
 import { MdNotificationsNone } from "react-icons/md";
 import avatar from "../../../assets/Ellipse 100.jpg";
 import logo from "../../../assets/logo.jpg";
+import './rates.css'
 
 function Rates() {
     return (
@@ -21,7 +22,26 @@ function Rates() {
                 </div>
             </div>
 
-            <div className="main-content"></div>
+            <div className="main-content">
+                <div className="flex">
+                    <div>chart</div>
+                    <div>graph</div>
+                </div>
+                <div>
+                    <div className='items'>
+                        <hr />
+                        <div><span className='cards'>Shipping rate</span></div><hr style={{ height: '20rem' }} />
+                        <span className='cards'>Shipping method</span> <hr />
+                        <span className='cards'>Delivery timeframe</span> <hr />
+                        <span className='cards'>Region rule</span> <hr />
+                        <span className='cards'>Order Size</span> <hr />
+
+
+                    </div>
+
+
+                </div>
+            </div>
         </div>
     );
 }
