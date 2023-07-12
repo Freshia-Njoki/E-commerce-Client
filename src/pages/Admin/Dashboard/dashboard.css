@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-around;
   gap: 30px;
-  height: 10vh;
+  height: 9vh;
   place-items: center;
 }
 
@@ -39,6 +39,7 @@ p {
   background-color: #4e4cc4;
   width: 100%;
   margin: 1rem 0.5rem 0.5rem 0rem;
+  height: 70vh;
   border-radius: 5px;
 }
 
@@ -81,8 +82,8 @@ p {
 
 .top-sales {
   width: 50%;
-  margin-top: 1rem;
   color: whitesmoke;
+  height: 65vh;
 }
 .desc {
   display: flex;
@@ -91,7 +92,7 @@ p {
   padding: 0px;
 }
 .desc p {
-  margin-left: 0.7rem;
+  margin-left: 0.5rem;
 }
 
 .icon {

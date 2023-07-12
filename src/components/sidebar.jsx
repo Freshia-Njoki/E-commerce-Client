@@ -1,15 +1,12 @@
 import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import { Link } from "react-router-dom"
 import '../pages/Dashboard/dashboard.css'
-<<<<<<< HEAD
-=======
-import Categories from './Categories/Categories';
 
->>>>>>> 7593043011adeda939dbdd6b94a063777ec956ee
 
 function sidebar() {
+    //collapse sidebar
     return (
-        <div>
+        <div >
             <Sidebar className='sidebar'>
                 <Menu menuItemStyles={{
                     button: {

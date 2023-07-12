@@ -43,11 +43,10 @@ function LoginForm() {
                         <p>Confirm Password</p>
                     </div>
 
-<<<<<<< HEAD
                     <button className='btn submitBtn animatedButton'><Link to="/admindashboard" style={{ color: 'white', textDecoration: 'none' }}>Continue</Link></button>
 =======
                     <button className='btn submitBtn animatedButton'>Continue</button>
->>>>>>> 7593043011adeda939dbdd6b94a063777ec956ee
+
                     <div className="sign">
                         <p>Already have an account?</p>
                         <Link to="/signup" style={{ color: 'blue', fontSize: '20px' }}>Sign in</Link>

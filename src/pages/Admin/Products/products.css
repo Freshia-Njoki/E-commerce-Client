@@ -1,0 +1,55 @@
+.date {
+  gap: 1.5rem;
+  padding-left: 20rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.main-content {
+  width: 80vh;
+  padding: 1rem;
+  gap: 2rem;
+}
+.mini-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.content {
+  height: 70vh;
+}
+
+.img-tags {
+  display: flex;
+  flex-direction: column;
+}
+.img-tags img {
+  height: 100px;
+  width: 150px;
+  border-radius: 3px;
+  margin: 0.5rem;
+}
+
+.spans {
+  display: flex;
+  gap: 3rem;
+  color: whitesmoke;
+  margin: 1rem;
+}
+
+.estimate h3 {
+  color: whitesmoke;
+  margin: 2rem;
+  margin-left: 3rem;
+}
+
+.span1 {
+  display: flex;
+  gap: 7rem;
+  color: whitesmoke;
+  margin: 1rem;
+}

@@ -3,7 +3,7 @@
   flex-direction: row;
   height: 10vh;
   place-items: center;
-  gap: 30px;
+  gap: 10px;
 }
 
 .navbar h3 {
@@ -24,19 +24,22 @@
   gap: 20px;
 }
 
+.content {
+  /* display: grid;
+  grid-template-columns: auto 1fr; */
+  display: flex;
+  align-items: flex-start;
+}
 .sidebar {
   background-color: #4e4cc4;
   height: 70vh;
-  margin-top: 1rem;
+  width: 40vh;
+  border: 2px solid red;
 }
 
 .menu {
   height: 7vh;
   padding-top: 1rem;
-}
-
-.content {
-  display: flex;
 }
 
 .card p {
