@@ -1,49 +1,45 @@
-.header-wrapper{
-    display: flex;
-    gap: 30vh;
-    height: 10vh;
-    background-color: #4E4CC4;
-    text-align: center;
+.header-wrapper {
+  display: flex;
+  height: 10vh;
+  background-color: #4e4cc4;
+  text-align: center;
 }
 
-.main{
-    display: flex;
-    padding-top: 10px;
-    align-items: center;
-  
+.main {
+  align-items: center;
 }
 
 .main span {
-    padding-left: 4rem;
+  padding-left: 3rem;
 }
 
-.contact{
-    padding-top: 10px;
-    display: flex;
-    align-items: center;
-   
+.contact {
+  padding-top: 10px;
+  display: flex;
+
+  align-items: center;
 }
 
 .contact span {
-    padding-left: 2rem;
+  padding-right: 3rem;
 }
 
 @keyframes buttonAnimation {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
   }
-  
-  .animatedButton {
-    animation: buttonAnimation 1s infinite;
-    padding: 5px;
-    align-items: center;
-    border-radius: 5px;
-    border: none;
-  } 
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animatedButton {
+  animation: buttonAnimation 1s infinite;
+  padding: 5px;
+  align-items: center;
+  border-radius: 5px;
+  border: none;
+}

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import './nav.css'
+import logo from '../assets/logo.jpg'
 import { Link } from 'react-router-dom'
 
 function Nav() {
@@ -29,7 +30,7 @@ function Nav() {
 
     return (
         <div className="header-wrapper">
-            <img src="logo" alt="" />
+            <img src={logo} alt="" style={{ height: '60px', borderRadius: '4px', padding: '2px' }} />
             <div className="main">
                 <button className='submitBtn animatedButton'><Link to='/login'>Get Started</Link> </button>
                 <span>ShopAll</span>
@@ -40,17 +41,19 @@ function Nav() {
             <div className="contact">
                 <span onMouseEnter={() => { setAboutVisible(true) }}
                     onMouseLeave={() => { setAboutVisible(false) }}
-                    style={{ color: 'blue' }}>
+                    style={{ color: 'white' }}>
                     About {isAboutVisible && aboutContent}
 
                 </span>
 
                 <span onMouseEnter={() => { setcontactUsVisible(true) }}
-                    onMouseLeave={() => { setcontactUsVisible(false) }}>
-                    Contact Us {iscontactUsVisible && contactUSContent}
+                    onMouseLeave={() => { setcontactUsVisible(false) }}
+                    style={{ color: 'white' }}
+                >
+                    ContactUs {iscontactUsVisible && contactUSContent}
 
                 </span>
-                <span>$ 0.00</span>
+                <span>$0.00</span>
                 <span>  <AiOutlineShoppingCart />
                 </span>
 

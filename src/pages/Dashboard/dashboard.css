@@ -28,6 +28,7 @@
   /* display: grid;
   grid-template-columns: auto 1fr; */
   display: flex;
+  flex-direction: row !important;
   align-items: flex-start;
 }
 .sidebar {
