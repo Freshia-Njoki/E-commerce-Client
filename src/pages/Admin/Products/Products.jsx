@@ -46,15 +46,15 @@ function Products() {
 
                         <div style={{ display: 'flex' }}>
                             <img src={img5} alt="" />
-                            <div><span className='cards'>Bag</span></div>
+                            <span className='cards'>Bag</span>
                         </div>
                         <div style={{ display: 'flex' }}>
                             <img src={img6} alt="" />
-                            <div><span className='cards'>Bag</span></div>
+                            <span className='cards'>Bag</span>
                         </div>
                         <div style={{ display: 'flex' }}>
                             <img src={img7} alt="" />
-                            <div><span className='cards'>Beauty</span></div>
+                            <span className='cards'>Beauty</span>
                         </div>
                         <vr />
                     </div>
@@ -111,7 +111,7 @@ function Products() {
 
             </div>
 
-        </div>
+        </div >
     )
 }
 

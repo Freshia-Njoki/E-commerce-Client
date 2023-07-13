@@ -31,7 +31,7 @@ function Nav() {
     return (
         <div className="header-wrapper">
             <img src={logo} alt="" style={{ height: '60px', borderRadius: '4px', padding: '2px' }} />
-            <div className="main">
+            <div className="quickbuy">
                 <button className='submitBtn animatedButton'><Link to='/login'>Get Started</Link> </button>
                 <span>ShopAll</span>
                 <span>Accessories</span>

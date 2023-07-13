@@ -3,13 +3,13 @@
   height: 10vh;
   background-color: #4e4cc4;
   text-align: center;
-}
-
-.main {
   align-items: center;
 }
 
-.main span {
+.quickbuy {
+  margin: 0rem 25rem 0rem 2rem;
+}
+.quickbuy span {
   padding-left: 3rem;
 }
 
