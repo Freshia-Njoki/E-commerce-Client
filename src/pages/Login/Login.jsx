@@ -30,7 +30,7 @@ function Login() {
                     </div>
                     <div className="form">
 
-                        <h3>Log in</h3>
+                        <h4>Log in</h4>
 
                         <form className="form-inputs" >
                             <label htmlFor="text">Email Address</label>

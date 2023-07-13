@@ -31,7 +31,8 @@ function Signup() {
                         <label htmlFor="password">Password</label>
                         <input type="password" id='password' placeholder='8+ characters'  {...register("password")} />
                         {/* <p>{errors.password?.message}</p> */}
-                        <input className='registerBtn' type="text" value="Register" style={{ marginTop: "30PX" }} />
+                        <input className='registerBtn' type="text" placeholder="Register" style={{ marginTop: "30PX" }} />
+
 
                     </form>
                 </div>

@@ -18,6 +18,7 @@ function LoginForm() {
         resolver: yupResolver(schema)
     })
     return (
+        //use navigate- on continue button
         <div className='login'>
             <div className="admin-form">
                 <form className="form-inputs" >
@@ -43,9 +44,9 @@ function LoginForm() {
                         <p>Confirm Password</p>
                     </div>
 
+
                     <button className='btn submitBtn animatedButton'><Link to="/admindashboard" style={{ color: 'white', textDecoration: 'none' }}>Continue</Link></button>
-=======
-                    <button className='btn submitBtn animatedButton'>Continue</button>
+
 
                     <div className="sign">
                         <p>Already have an account?</p>

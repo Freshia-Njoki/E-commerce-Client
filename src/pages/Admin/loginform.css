@@ -3,7 +3,16 @@
 }
 .admin-form {
   background-color: #3d3d3d;
-  height: 70%;
+  color: white;
+  border-radius: 16px;
+  padding: 30px;
+
+  width: 40%;
+  height: 6=70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .loginBanner {
   margin: 10px;
