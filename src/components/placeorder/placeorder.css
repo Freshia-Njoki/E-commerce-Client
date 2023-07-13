@@ -1,6 +1,6 @@
 .bg {
   background-color: #4e4cc4;
-  height: 90vh;
+  height: 87vh;
 }
 .p-nav {
   padding-left: 2rem;
@@ -14,7 +14,9 @@
 
 .mini-nav {
   display: flex;
-  gap: 25rem;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-bottom: 0rem;
 }
 .shipping-info {
   background-color: whitesmoke;
@@ -25,14 +27,14 @@
   border-radius: 5px;
 }
 .customer-info {
-  margin-top: 1rem;
+  padding-top: 0.3rem;
+
   display: flex;
 }
 
 .information {
   display: flex;
-
-  gap: 1rem;
+  gap: 2rem;
   margin-top: 0.5rem;
 }
 .edit {
@@ -44,8 +46,9 @@
 .payment {
   background-color: whitesmoke;
   width: 70%;
-  padding: 0.5rem;
+  padding: 0.6rem;
   padding-left: 2rem;
+  margin: 1rem 0rem 1rem 5rem;
   margin-top: 1rem;
   margin-left: 5rem;
   margin-bottom: 1rem;
@@ -65,10 +68,11 @@
 
 .payment-footer {
   display: flex;
-  padding: 1rem;
+  padding: 0.9rem;
   margin-bottom: 5px;
   background-color: white;
   align-items: center;
+  place-items: center;
   gap: 60%;
   padding-left: 3rem;
 }

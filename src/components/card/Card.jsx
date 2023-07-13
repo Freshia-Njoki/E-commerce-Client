@@ -4,7 +4,7 @@ import img from '../../assets/img.avif'
 
 function Card() {
     return (
-        <div className='section'>
+        <div className='card-section'>
             <div className="card">
                 <div><img className='img' src={img} alt="" /></div>
             </div>

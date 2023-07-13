@@ -25,12 +25,9 @@ function Orders() {
                 </div>
             </div>
 
-            <div className="content">
-                <div className="main">
-
-                    <div><span className='cards'>All orders</span></div>
-
-
+            <div className="order-content">
+                <div className="status">
+                    <span className='cards'>All orders</span>
                     <span className='cards'>Dispatch</span>
                     <span className='cards'>Pending</span>
                     <span className='cards'>Completed</span>
@@ -44,7 +41,7 @@ function Orders() {
                 </div>
 
                 <div className='items'>
-                    <div><span className='cards'>ID</span></div><hr style={{ height: '20rem' }} />
+                    <span className='cards'>ID</span><hr style={{ height: '15rem' }} />
                     <span className='cards'>Name</span> <hr />
                     <span className='cards'>Address</span> <hr />
                     <span className='cards'>Date</span> <hr />

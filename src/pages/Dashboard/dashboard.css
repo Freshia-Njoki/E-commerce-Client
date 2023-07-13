@@ -24,18 +24,18 @@
   gap: 20px;
 }
 
-.content {
+.display {
   display: flex;
-  gap: 1rem;
+  /* gap: 1rem; */
   flex-direction: row !important;
-  height: 80vh;
+  height: 75vh;
+
+  background-color: #4e4cc4;
+  width: 100%;
   align-items: flex-start;
 }
 .sidebar {
-  background-color: #4e4cc4;
   height: 70vh;
-  width: 40vh;
-  border: 2px solid red;
 }
 
 .menu {
@@ -71,9 +71,10 @@
 
 .img {
   width: 260px;
-  height: 170px;
+  height: 180px;
 }
 
-.section {
-  padding-left: 0px;
+.card-section {
+  width: 20rem;
+  padding: 0.5rem 1rem 0.5rem 2rem;
 }

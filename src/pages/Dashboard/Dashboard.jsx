@@ -36,7 +36,7 @@ function Dashboard() {
                 </div>
             </div>
 
-            <div className="content">
+            <div className="display">
                 <Sidebar />
                 <div className="products">
                     <Card />

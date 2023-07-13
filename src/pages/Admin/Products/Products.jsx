@@ -7,22 +7,26 @@ import img6 from '../../../assets/image 6.jpg'
 import img7 from '../../../assets/image 7.jpg'
 import img8 from '../../../assets/image 8.jpg'
 import avatar from '../../../assets/Ellipse 100.jpg'
+import logo from '../../../assets/logo.jpg'
 import './products.css'
 
 function Products() {
     return (
         <div>
-            <div className="nav">
-                <div><h3>28 orders found</h3></div>
-                <div className='info'>
+            <div className="products-nav">
+                <div className="it-left">
+                    <img src={logo} alt="" style={{ height: '60px', width: '60px' }} />
+                    <h3>28 orders found</h3>
+                </div>
+                <div className='admin-info'>
                     <MdNotificationsNone style={{ height: "30px", width: '30px' }} />
-                    <img src={avatar} alt="" />
+                    <img src={avatar} alt="" style={{ borderRadius: '50px', border: 'none' }} />
                     <p>Freshia</p>
                 </div>
             </div>
 
-            <div className="content">
-                <div className='mini-nav'>
+            <div className="product-content">
+                <div className='mini-content'>
 
                     <div><span className='cards'>Men</span></div>
                     <span className='cards'>Female</span>
@@ -38,7 +42,7 @@ function Products() {
                 </div>
 
                 <div className='item'>
-                    <div className="img-tags">
+                    <div className="mini-items">
 
                         <div style={{ display: 'flex' }}>
                             <img src={img5} alt="" />
@@ -54,7 +58,7 @@ function Products() {
                         </div>
                         <vr />
                     </div>
-                    <div className='main-content'>
+                    <div className='main-product--content'>
                         <div>
                             <img src={img8} alt="" style={{ height: '200px', width: '200px', borderRadius: '3px', marginRight: '1rem' }} />
                         </div>

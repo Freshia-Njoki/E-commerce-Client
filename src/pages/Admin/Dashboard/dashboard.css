@@ -7,6 +7,9 @@
   place-items: center;
 }
 
+.adm-sidebar {
+  margin-top: 0.8rem;
+}
 .user {
   display: flex;
   gap: 1rem;
@@ -35,11 +38,12 @@ p {
   margin: 2rem;
 }
 
-.main {
+.admin-dashboard {
   background-color: #4e4cc4;
   width: 100%;
   margin: 1rem 0.5rem 0.5rem 0rem;
   height: 70vh;
+  display: flex;
   border-radius: 5px;
 }
 
@@ -81,10 +85,11 @@ p {
 }
 
 .top-sales {
+  margin-top: 1rem;
   width: 50%;
   color: whitesmoke;
-  height: 65vh;
 }
+
 .desc {
   display: flex;
   gap: 1rem;

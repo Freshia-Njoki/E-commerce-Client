@@ -23,10 +23,10 @@ function AdminDashboard() {
 
             </div>
             <div className="cols">
-                <div>
+                <div className="adm-sidebar">
                     <AdminSidebar />
                 </div>
-                <div className="main">
+                <div className="admin-dashboard">
                     <div className="views">
                         <div className="statistics">
                             <div className="balance">
@@ -44,7 +44,7 @@ function AdminDashboard() {
                         </div>
                     </div>
                     <div className="top-sales">
-                        <h5>Top selling products</h5>
+                        <h4>Top selling products</h4>
                         <div className="img">
 
                             <div>
