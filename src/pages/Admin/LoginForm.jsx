@@ -19,7 +19,7 @@ function LoginForm() {
     })
     return (
         <div className='login'>
-            <div className="login-form">
+            <div className="admin-form">
                 <form className="form-inputs" >
                     <h3 className="loginBanner">Set up your account </h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
