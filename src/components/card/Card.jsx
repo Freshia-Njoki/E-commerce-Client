@@ -7,10 +7,7 @@ function Card() {
         <div className='section'>
             <div className="card">
                 <div><img className='img' src={img} alt="" /></div>
-
-
             </div>
-
 
             <div className="description"><p>product name</p>
                 <p>price: $55.50</p></div>

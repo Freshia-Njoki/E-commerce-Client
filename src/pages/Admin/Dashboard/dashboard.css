@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-around;
   gap: 30px;
-  height: 9vh;
+  height: 8vh;
   place-items: center;
 }
 
