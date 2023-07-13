@@ -24,14 +24,14 @@
   margin-left: 5rem;
   border-radius: 5px;
 }
-.flex {
+.customer-info {
   margin-top: 1rem;
   display: flex;
-  gap: 50%;
 }
 
-.info {
+.information {
   display: flex;
+
   gap: 1rem;
   margin-top: 0.5rem;
 }
@@ -59,7 +59,7 @@
 .payment-card2 {
   display: flex;
   background-color: white;
-  gap: 40rem;
+  gap: 42.3rem;
   margin: 0.5rem;
 }
 

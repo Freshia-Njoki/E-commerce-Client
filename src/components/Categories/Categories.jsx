@@ -15,7 +15,7 @@ function Categories() {
                 <input type="text" placeholder='Search...' style={{ marginLeft: '20rem', padding: '5px 80px', borderRadius: '8px', border: '1px solid grey' }} />
             </div>
 
-            <div className="main-content">
+            <div className="categories-content">
                 <div>
                     <Sidebar className='sidebar'>
                         <Menu menuItemStyles={{

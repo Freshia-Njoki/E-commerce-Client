@@ -8,11 +8,15 @@
   padding-right: 5rem;
 }
 
-. img {
+.card img {
   width: 300px;
   height: 180px;
+  margin-right: 1rem;
 }
 
+.sidebar {
+  color: black;
+}
 .card {
   /* border: 2px solid red; */
   display: grid;
@@ -20,12 +24,12 @@
   gap: 2.5rem;
 }
 
-.main-content {
+.categories-content {
   display: flex;
+  background-color: #4e4cc4;
   flex-direction: row;
 }
 
 .section {
-  margin-left: 2.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0.5rem 1rem 2rem;
 }

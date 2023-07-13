@@ -25,12 +25,12 @@ function PlaceOrder() {
                     </div>
                 </div>
                 <div>
-                    <div className="flex">
+                    <div className="customer-info">
 
 
                         <div style={{ paddingLeft: "1rem" }}>
                             <h4>Freshia Ruitha</h4>
-                            <div className='info'>
+                            <div className='information'>
                                 <GrLocation style={{ width: '20px', height: '20px' }} />
                                 <p>Location description</p>
                             </div>
