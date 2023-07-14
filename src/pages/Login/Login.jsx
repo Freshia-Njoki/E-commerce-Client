@@ -9,15 +9,18 @@ import './login.css'
 
 function Login() {
 
-
     const schema = yup.object().shape({
-        username: yup.string().required("full name is required"),
-        password: yup.string().matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{4,}$/, "should contain special characters, letters, numbers and 4 charcacters long").required("password is required"),
+        username: yup.string().required("Username is required"),
+        password: yup.string().matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{4,}$/, "should contain special characters, letters, numbers and 4 characters long").required("password is required"),
 
     });
-    const { register, formState: { errors } } = useForm({
+    const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema)
-    })
+    });
+
+    const onSubmit = (data) => {
+        console.log(data);
+    }
 
     return (
         <>
@@ -32,15 +35,16 @@ function Login() {
 
                         <h4>Log in</h4>
 
-                        <form className="form-inputs" >
-                            <label htmlFor="text">Email Address</label>
-                            <input type="text" id="text" placeholder='' {...register("email")} />
-                            {/* <p>{errors.email?.message}</p> */}
+                        <form className="form-inputs" onSubmit={handleSubmit(onSubmit)}>
+                            <label htmlFor="text">User name</label>
+                            <input type="text" id="text" placeholder='Freshia' {...register("username")} />
+                            <p>{errors.username?.message}</p>
                             <label htmlFor="password">Password</label>
-                            <input type="password" id='password' placeholder=''  {...register("password")} />
-                            {/* <p>{errors.password?.message}</p> */}
+                            <input type="password" id='password' placeholder='pass@123'  {...register("password")} />
+                            <p>{errors.password?.message}</p>
                             {/* navigate upon succesful signup-remove link */}
-                            <Link to='/dashboard'><input className='loginBtn' type="submit" value="Login" /></Link>
+                            {/* <Link to='/dashboard'></Link> */}
+                            <input className='loginBtn' type="submit" value="Login" />
 
                             <Link to='/signup'><input className='signupBtn' type="submit" value="Sign up" /></Link>
                         </form>

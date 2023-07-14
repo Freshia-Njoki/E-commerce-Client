@@ -31,6 +31,10 @@
 .form-inputs {
   font-size: 20px;
 }
+
+.form-inputs p {
+  color: red;
+}
 .form-inputs input {
   display: flex;
   flex-direction: column;
@@ -50,6 +54,11 @@
   border: 1px solid grey;
 }
 
+/* .loginBtn:hover {
+  cursor: pointer;
+  transition-delay: 0.s;
+  background-color: whitesmoke;
+} */
 .signupBtn {
   border-radius: 8px;
   padding: 5px 90px;
