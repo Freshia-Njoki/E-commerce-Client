@@ -1,13 +1,14 @@
 import * as yup from 'yup'
 import { Link } from 'react-router-dom'
 import { yupResolver } from "@hookform/resolvers/yup"
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form'
-// import Axios from 'axios';
+import Axios from 'axios';
 import './login.css'
 
 
 function Login() {
+    const navigate = useNavigate();
 
     const schema = yup.object().shape({
         username: yup.string().required("Username is required"),
@@ -19,7 +20,18 @@ function Login() {
     });
 
     const onSubmit = (data) => {
-        console.log(data);
+        Axios.post("http://localhost:8081/auth/login", data)
+            .then(({ data }) => {
+                //validate to check if the data.token is present
+                if (data.token) {
+                    navigate("/dashboard");
+                }
+
+            })
+            .catch(({ response }) => {
+                alert(response.data.error)
+
+            });
     }
 
     return (
@@ -37,10 +49,10 @@ function Login() {
 
                         <form className="form-inputs" onSubmit={handleSubmit(onSubmit)}>
                             <label htmlFor="text">User name</label>
-                            <input type="text" id="text" placeholder='Freshia' {...register("username")} />
+                            <input type="text" id="text" placeholder='freshiaa' {...register("username")} />
                             <p>{errors.username?.message}</p>
                             <label htmlFor="password">Password</label>
-                            <input type="password" id='password' placeholder='pass@123'  {...register("password")} />
+                            <input type="password" id='password' placeholder='freshiaa@123'  {...register("password")} />
                             <p>{errors.password?.message}</p>
                             {/* navigate upon succesful signup-remove link */}
                             {/* <Link to='/dashboard'></Link> */}

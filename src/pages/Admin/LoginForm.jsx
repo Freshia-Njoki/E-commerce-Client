@@ -1,63 +1,60 @@
 import * as yup from 'yup'
 import { yupResolver } from "@hookform/resolvers/yup"
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
 import './loginform.css'
-import Signup from '../Signup/Signup';
+import Axios from 'axios';
 
-function LoginForm() {
+function Signup() {
+    const navigate = useNavigate();
+
     const schema = yup.object().shape({
-        username: yup.string().required("admin name is required"),
-        email: yup.string().matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, 'Incorrect email format')
+        username: yup.string().required("username is required"),
+        email: yup.string().matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, 'Invalid email format')
             .required('Email is required'),
-        password: yup.string().matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{4,}$/, "should contain special characters, letters, numbers and 4 charcacters long").required("password is required"),
+        password: yup.string().matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{4,}$/, "should contain special characters, letters, numbers and 4 characters long").required("password is required"),
 
     });
-    const { register, formState: { errors } } = useForm({
+    const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema)
-    })
+    });
+
+    const onSubmit = (data) => {
+        Axios.post("http://localhost:8081/auth/adminLogin", data)
+
+            .then(
+                console.log(data)
+            )
+
+            .catch(({ response }) => {
+                alert(response.data.error)
+
+            });
+    }
+
     return (
-        //use navigate- on continue button
-        <div className='login'>
-            <div className="admin-form">
-                <form className="form-inputs" >
-                    <h3 className="loginBanner">Set up your account </h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                    <input type="text" placeholder='Admin Name' {...register("adminname")} />
-                    {/* <p>{errors.username?.message}</p> */}
-
-                    <input type="text" placeholder='Mobile Number' {...register("mobile_no")} />
-                    {/* <p>{errors.mobile_no?.message}</p> */}
-
-                    <input type="text" placeholder='Email Address' {...register("email")} />
-                    {/* <p>{errors.email?.message}</p> */}
-
-                    <input type="password" placeholder='Password'  {...register("password")} />
-                    {/* <p>{errors.password?.message}</p> */}
-
-                    <input type="password" placeholder='Confirm Password'  {...register("Confirm_password")} />
-                    {/* <p>{errors.password?.message}</p> */}
-                    <div className="checkbox">
-                        <input type="checkbox" />
-                        <p>Confirm Password</p>
-                    </div>
+        <>
+            <div className='signup'>
+                <div className="sigup-form">
+                    <form className="form-inputs" onSubmit={handleSubmit(onSubmit)} >
+                        <h3 className="sigupBanner">Log in </h3>
+                        <label htmlFor="username">Admin name</label>
+                        <input type="text" id="username" placeholder='' {...register("admin_name")} />
+                        <p>{errors.username?.message}</p>
+                        <label htmlFor="email">Email Address</label>
+                        <input type="text" id="email" placeholder='' {...register("email")} />
+                        <p>{errors.email?.message}</p>
+                        <label htmlFor="password">Password</label>
+                        <input type="password" id='password' placeholder=''  {...register("password")} />
+                        <p>{errors.password?.message}</p>
+                        <input className='registerBtn' type="submit" style={{ marginTop: "30PX" }} />
 
 
-                    <button className='btn submitBtn animatedButton'><Link to="/admindashboard" style={{ color: 'white', textDecoration: 'none' }}>Continue</Link></button>
-
-
-                    <div className="sign">
-                        <p>Already have an account?</p>
-                        <Link to="/signup" style={{ color: 'blue', fontSize: '20px' }}>Sign in</Link>
-                    </div>
-
-                </form>
-            </div >
-
-        </div >
+                    </form>
+                </div>
+            </div>
+        </>
     )
 }
 
-export default LoginForm
+export default Signup

@@ -5,6 +5,7 @@ import Logout from './pages/Logout/Logout'
 import Signup from './pages/Signup/Signup'
 import NotFound from './pages/NotFound/NotFound'
 import Login from './pages/Login/Login'
+import AdminSignup from './components/adminsignup/AdminSignup'
 import LoginForm from './pages/Admin/LoginForm';
 import Footer from './components/Footer/Footer'
 import Dashboard from './pages/Dashboard/Dashboard';
@@ -31,6 +32,7 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login />} />
           <Route path='/logout' element={<Logout />} />
+          <Route path='/adminsignup' element={<AdminSignup />} />
           <Route path='/adminlogin' element={<LoginForm />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/categories' element={<Categories />} />
