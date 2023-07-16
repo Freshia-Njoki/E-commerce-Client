@@ -48,7 +48,7 @@ function App() {
           <Route path='/rates' element={<Rates />} />
           <Route path='/report' element={<Report />} />
 
-          <Route path='' element={<NotFound />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
 
         <Footer />

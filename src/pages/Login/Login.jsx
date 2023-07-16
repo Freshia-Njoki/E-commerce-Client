@@ -5,9 +5,13 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form'
 import Axios from 'axios';
 import './login.css'
+import { useContext } from 'react';
+import { Context } from '../../components/context/userContext/Context';
 
 
 function Login() {
+    const { user, dispatch } = useContext(Context);
+    console.log(user);
     const navigate = useNavigate();
 
     const schema = yup.object().shape({
@@ -15,6 +19,7 @@ function Login() {
         password: yup.string().matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{4,}$/, "should contain special characters, letters, numbers and 4 characters long").required("password is required"),
 
     });
+
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema)
     });
@@ -24,6 +29,7 @@ function Login() {
             .then(({ data }) => {
                 //validate to check if the data.token is present
                 if (data.token) {
+                    dispatch({ type: "LOGIN_SUCCESS", payload: data })
                     navigate("/dashboard");
                 }
 

@@ -3,6 +3,7 @@ import { BiHelpCircle } from 'react-icons/bi';
 import { FiLogOut } from 'react-icons/fi';
 import './dashboard.css';
 import Card from '../../components/card/card';
+import { Link } from 'react-router-dom';
 
 function Dashboard() {
     return (
@@ -31,7 +32,7 @@ function Dashboard() {
                     />
                     <div className="nav-right">
                         <BiHelpCircle /> <p>Help</p>
-                        <FiLogOut /> <p>Logout</p>
+                        <FiLogOut /><Link to="/logout"><p>Logout</p></Link>
                     </div>
                 </div>
             </div>
