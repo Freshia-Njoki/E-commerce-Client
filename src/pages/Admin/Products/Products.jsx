@@ -9,8 +9,29 @@ import img8 from '../../../assets/image 8.jpg'
 import avatar from '../../../assets/Ellipse 100.jpg'
 import logo from '../../../assets/logo.jpg'
 import './products.css'
+import { useForm } from 'react-hook-form'
+import Axios from 'axios'
+
 
 function Products() {
+
+
+    const { register, handleSubmit, formState: { errors } } = useForm(
+
+    );
+
+    const onSubmit = (data) => {
+        Axios.post("http://localhost:8081/products/", data)
+
+            .then(({ data }) => {
+                //validate to check if the data.token is present
+                console.log(data)
+            })
+            .catch(({ response }) => {
+                alert(response.data.error)
+
+            });
+    }
     return (
         <div>
             <div className="products-nav">
@@ -56,7 +77,7 @@ function Products() {
                             <img src={img7} alt="" />
                             <span className='cards'>Beauty</span>
                         </div>
-                        <vr />
+
                     </div>
                     <div className='main-product--content'>
                         <div>
@@ -102,6 +123,17 @@ function Products() {
 
                             <span className='estimate'><h3>Estimate delivery : _____</h3></span>
 
+                        </div>
+
+                        <div>
+                            <form action="" encType="multipart/form-data" onSubmit={handleSubmit(onSubmit)}>
+                                <input type="file" id="image" {...register('image')} />
+                                <input type="text" label="Name" id="name" {...register('name')} />
+                                <input type="text" label="Description" id="Description" {...register('description')} />
+                                <input type="number" label="Price" id="Price"  {...register('price')} />
+                                <input type="number" label="Quantity" id="Quantity" {...register('quantity')} />
+                                <button type="submit">Upload</button>
+                            </form>
                         </div>
                     </div>
 

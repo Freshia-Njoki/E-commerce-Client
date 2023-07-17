@@ -1,7 +1,25 @@
 import { BsArrowLeftCircle } from 'react-icons/bs'
+import { useState, useEffect } from 'react';
 import './order.css'
 
 function order() {
+    const [currentDate, setCurrentDate] = useState('');
+    const [currentTime, setCurrentTime] = useState('');
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            const now = new Date();
+            const date = now.toLocaleDateString();
+            const time = now.toLocaleTimeString();
+            setCurrentDate(date);
+            setCurrentTime(time);
+        }, 1000);
+
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, []);
+
     return (
         <div className='order-page'>
             <div className="navbar">
@@ -16,8 +34,9 @@ function order() {
                 </p>
 
                 <div className='footer-order'>
-                    <p>date</p>
-                    <p>time</p>
+                    <p className="date">{currentDate}</p>
+                    <p className="time">{currentTime}</p>
+
                 </div>
 
             </div>
@@ -29,8 +48,8 @@ function order() {
                 </p>
 
                 <div className='footer-order'>
-                    <p>date</p>
-                    <p>time</p>
+                    <p className="date">{currentDate}</p>
+                    <p className="time">{currentTime}</p>
                 </div>
 
             </div>
@@ -42,7 +61,8 @@ function order() {
                 </p>
 
                 <div className='footer-order'>
-                    <p>time</p>
+                    <p className="date">{currentDate}</p>
+                    <p className="time">{currentTime}</p>
                 </div>
 
             </div>
