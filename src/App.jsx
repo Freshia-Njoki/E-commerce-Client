@@ -20,11 +20,25 @@ import Products from './pages/Admin/Products/Products'
 import Rates from './pages/Admin/Rates/Rates'
 import Report from './pages/Admin/Report/Report'
 import AdminDashboard from './pages/Admin/Dashboard/AdminDashboard';
+// import BarChart from './components/Charts/BarChart';
+// import { useState } from 'react';
+// import { UserData } from './Data';
+
 
 function App() {
+  // const [UserData, setUserData] = useState({
+  //   label: UserData.map((data) => data.year),
+  //   datasets: [{
+  //     label: "USers Gained",
+  //     data: UserData.map((data) => data.userGain),
+  //   }]
+  // })
+
 
   return (
     <>
+      {/* <BarChart chartData={UserData} /> */}
+
       <BrowserRouter>
 
         <Routes>
@@ -47,7 +61,6 @@ function App() {
           <Route path='/products' element={<Products />} />
           <Route path='/rates' element={<Rates />} />
           <Route path='/report' element={<Report />} />
-
           <Route path='*' element={<NotFound />} />
         </Routes>
 

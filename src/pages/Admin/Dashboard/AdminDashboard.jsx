@@ -9,7 +9,35 @@ import img9 from '../../../assets/image 9.jpg'
 import img10 from '../../../assets/image 10.jpg'
 import { AiOutlineHeart } from 'react-icons/ai'
 import './dashboard.css'
+import { UserData } from '../../../Data.js'
+
+import { Bar } from 'react-chartjs-2';
+import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from 'chart.js';
+ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend)
+
 function AdminDashboard() {
+    const data = {
+        labels: UserData.map((userData) => userData.year),
+
+        datasets: [
+            {
+                label: 'Gain',
+                data: UserData.map((userData) => userData.Gain),
+                backgroundColor: 'aqua',
+                borderColor: 'black',
+                borderWidth: 1,
+            },
+            {
+                label: 'Loss',
+                data: UserData.map((userData) => userData.Loss),
+                backgroundColor: 'green',
+                borderColor: 'black',
+                borderWidth: 1,
+            },
+        ],
+    };
+
+    const options = {}
     return (
         <div>
             <div className="admin-nav">
@@ -41,6 +69,7 @@ function AdminDashboard() {
                         </div>
                         <div className="graph">
                             <h5>Statistics</h5>
+                            <Bar data={data} options={options}></Bar>
                         </div>
                     </div>
                     <div className="top-sales">
