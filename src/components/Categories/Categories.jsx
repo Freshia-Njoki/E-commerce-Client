@@ -1,4 +1,4 @@
-import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
+// import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import image5 from '../../assets/image 5.jpg'
 import image6 from '../../assets/image 6.jpg'
 import image7 from '../../assets/image 7.jpg'
@@ -10,14 +10,10 @@ function Categories() {
     return (
         //dispatch to toggle the side nav
         <div>
-            <div className="navbar">
-                <h3>Categories</h3>
-                <input type="text" placeholder='Search...' style={{ marginLeft: '20rem', padding: '5px 80px', borderRadius: '8px', border: '1px solid grey' }} />
-            </div>
 
             <div className="categories-content">
                 <div>
-                    <Sidebar className='sidebar'>
+                    {/* <Sidebar className='sidebar'>
                         <Menu menuItemStyles={{
                             button: {
                                 // the active class will be added automatically by react router
@@ -37,7 +33,7 @@ function Categories() {
                             <MenuItem className="menu" >others </MenuItem>
 
                         </Menu>
-                    </Sidebar>
+                    </Sidebar> */}
                 </div>
                 <div className='section'>
                     <h2 style={{ marginLeft: '2rem' }}>Top Categories</h2>

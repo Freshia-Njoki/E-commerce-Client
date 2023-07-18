@@ -40,22 +40,11 @@ function Products() {
 
     return (
         <div>
-            <div className="products-nav">
-                <div className="it-left">
-                    <img src={logo} alt="" style={{ height: '60px', width: '60px' }} />
-                    <h3>28 orders found</h3>
-                </div>
-                <div className='admin-info'>
-                    <MdNotificationsNone style={{ height: "30px", width: '30px' }} />
-                    <img src={avatar} alt="" style={{ borderRadius: '50px', border: 'none' }} />
-                    <p>Freshia</p>
-                </div>
-            </div>
 
             <div className="product-content">
                 <div className='mini-content'>
 
-                    <div><span className='cards'>Men</span></div>
+                    <span className='cards'>Men</span>
                     <span className='cards'>Female</span>
                     <span className='cards'>Fashion</span>
 
@@ -72,10 +61,6 @@ function Products() {
                     <div className="mini-items">
 
                         <div style={{ display: 'flex' }}>
-                            <img src={img5} alt="" />
-                            <span className='cards'>Bag</span>
-                        </div>
-                        <div style={{ display: 'flex' }}>
                             <img src={img6} alt="" />
                             <span className='cards'>Bag</span>
                         </div>
@@ -87,7 +72,7 @@ function Products() {
                     </div>
                     <div className='main-product--content'>
                         <div>
-                            <img src={img8} alt="" style={{ height: '200px', width: '200px', borderRadius: '3px', marginRight: '1rem' }} />
+                            <img src={img8} alt="" style={{ height: '150px', width: '150px', borderRadius: '3px', marginRight: '1rem' }} />
                         </div>
                         <div >
                             <span className='spans'>
@@ -131,13 +116,13 @@ function Products() {
 
                         </div>
 
-                        <div>
+                        <div className='form'>
                             <form method="post" enctype="multipart/form-data" onSubmit={handleSubmit(onSubmit)}>
 
                                 <input type="file" id="image" {...register('image')} name='image' />
-                                <label htmlFor="name">Enter the product name</label>
+                                <label htmlFor="name">ProductName</label>
                                 <input type="text" label="Name" id="name" {...register('name')} /><br />
-                                <label htmlFor="Description">Product description</label>
+                                <label htmlFor="Description">Description</label>
                                 <input type="text" label="Description" id="Description" {...register('description')} /><br />
                                 <label htmlFor="Price">Price</label><br />
                                 <input type="number" label="Price" id="Price"  {...register('price')} /> <br />

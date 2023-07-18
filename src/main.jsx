@@ -11,8 +11,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <ContextProvide>
         <App />
       </ContextProvide>
-
-
     </UIContextProvider>
   </ContextProvider>
 

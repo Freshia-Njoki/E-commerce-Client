@@ -1,6 +1,5 @@
 import { MdNotificationsNone } from 'react-icons/md'
 import avatar from '../../../assets/Ellipse 100.jpg'
-import logo from '../../../assets/logo.jpg'
 import './orders.css'
 
 function Orders() {
@@ -10,7 +9,7 @@ function Orders() {
                 <div className='logo'>
 
                     <div className="infor">
-                        <img src={logo} alt="" style={{ height: '60px', width: '60px' }} />
+
 
                         <h3>28 orders found</h3></div>
 

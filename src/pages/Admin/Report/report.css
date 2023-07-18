@@ -1,9 +1,8 @@
 .report-content {
   background-color: #4e4cc4;
-  width: 94%;
-  height: 70vh;
+  width: 130%;
+  height: 85vh;
   border-radius: 3px;
-  gap: 3rem;
   display: flex;
   flex-direction: row;
   padding-left: 5rem;

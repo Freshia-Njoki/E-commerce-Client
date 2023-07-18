@@ -22,33 +22,16 @@ function Rates() {
 
     return (
         <div>
-            <div className="nav">
-                <div className="logo">
-                    <div className="infor">
-                        <img src={logo} alt="" style={{ height: "60px", width: "60px" }} />
-
-                        <h3>28 orders found</h3>
-                    </div>
-
-                    <div className="avr">
-                        <MdNotificationsNone style={{ height: "30px", width: "30px" }} />
-                        <img src={avatar} alt="" />
-                        <p>Freshia</p>
-                    </div>
-                </div>
-            </div>
-
             <div className="main-content">
                 <div className="flex">
                     <div>chart</div>
                 </div>
                 <div>
-                    {/* <hr style={{ height: '20rem' }} /> */}
                     {shippingData.map((shippingItem) => (
                         <div key={shippingItem.id} className='items'>
 
-                            <span className='cards' style={{ border: '1px solid red' }}>Shipping rate</span>
-                            <div style={{ border: '1px solid red' }}><ul>{shippingItem.shippingRate}</ul> </div>
+                            <span className='cards'>Shipping rate</span>
+                            <div><ul>{shippingItem.shippingRate}</ul> </div>
 
                             <div>
                                 <span className='cards'>Shipping method: </span>
