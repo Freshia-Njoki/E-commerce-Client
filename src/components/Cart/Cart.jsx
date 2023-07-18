@@ -5,7 +5,7 @@ import img5 from '../../assets/image 5.jpg'
 import img6 from '../../assets/image 6.jpg'
 import { Link } from 'react-router-dom'
 import './cart.css'
-import PlaceOrder from '../../components/placeorder/PlaceOrder'
+import PlaceOrder from '../placeorder/PlaceOrder'
 
 function Cart() {
     //usestate handle bag quantity

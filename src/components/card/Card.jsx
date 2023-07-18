@@ -1,5 +1,5 @@
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
-import '../../pages/Dashboard/dashboard.css'
+import '../Dashboard/dashboard.css'
 
 
 function Card({ img, productName, price, description }) {
