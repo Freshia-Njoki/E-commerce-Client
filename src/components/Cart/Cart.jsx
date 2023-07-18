@@ -1,84 +1,58 @@
-import { BsArrowLeftCircle, BsBoxSeam, BsArrowRightCircle } from 'react-icons/bs'
-import { AiFillTags } from 'react-icons/ai'
-import { FiCheckCircle, FiCircle } from 'react-icons/fi'
-import img5 from '../../assets/image 5.jpg'
-import img6 from '../../assets/image 6.jpg'
-import { Link } from 'react-router-dom'
-import './cart.css'
-import PlaceOrder from '../placeorder/PlaceOrder'
+import { useContext } from 'react';
+import { BsArrowLeftCircle, BsBoxSeam, BsArrowRightCircle } from 'react-icons/bs';
+import { AiFillTags } from 'react-icons/ai';
+import { FiCheckCircle, FiCircle } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+// Replace 'path/to/your/context/file' with the correct path to your cart context file
+import img5 from '../../assets/image 5.jpg';
+import img6 from '../../assets/image 6.jpg';
+import './cart.css';
+import PlaceOrder from '../placeorder/PlaceOrder';
+import { Context } from '../context/UserDashboardContext/Context';
 
 function Cart() {
     //usestate handle bag quantity
+
+    // Fetch the cart state from the context
+    const state = useContext(Context);
+    const { cart } = useContext(Context);
+
+    console.log(cart)
+
     return (
         <>
             <div className='cart-page'>
-                <div className="cart-nav">
-                    <BsArrowLeftCircle style={{ width: '32px', height: '32px' }} />
-                    <h2 style={{ marginLeft: "30%" }}>Cart</h2>
-                </div>
+                {/* Rest of the code ... */}
 
-                <div className='cart-body'>
-                    <div className='cart-header'>
-                        <FiCheckCircle style={{ width: '30px', height: '30px' }} />
-                        <BsBoxSeam style={{ width: '32px', height: '32px' }} />
-                        <h3>ZY charm</h3>
-                        <BsArrowRightCircle style={{ width: '25px', height: '25px' }} />
-                        <div className='tag' ><AiFillTags style={{ width: '32px', height: '32px' }} /></div>
-
-                    </div>
-                    <div className='item'>
-                        <div className="product"><img src={img5} alt="" style={{ paddingLeft: "2rem", width: '160px', height: '120px' }} />
-                            <div className="desc">
-                                <p>Brown Elegant Statement Handbag </p>
-                                <p>price :  $79.99</p></div>
+                {/* Map through the 'cart' array to display items */}
+                {cart?.map((item) => (
+                    <div key={item.id} className='cart-body'>
+                        {/* Display the item details */}
+                        <div className='cart-header'>
+                            {/* ... */}
+                            <h3>{item.name}</h3>
+                            {/* ... */}
                         </div>
-                        <div className="btns">
-                            +  <button className='btn1'> quantity </button> -
-                            <button className='btn2'><Link to="/placeorder" element={<PlaceOrder />} style={{ color: 'white', textDecoration: 'none' }}>Order Now</Link></button>
-                        </div>
-                    </div>
+                        <div className='item'>
+                            <div className="product">
+                                <img className='img' src={`http://localhost:8081${item.image_path}`} alt="" style={{ paddingLeft: "2rem", width: '160px', height: '120px' }} />
 
-                </div>
-
-                <div className='cart-body'>
-                    <div className='cart-header'>
-                        <FiCircle style={{ width: '30px', height: '30px' }} />
-                        <BsBoxSeam style={{ width: '32px', height: '32px' }} />
-                        <h3>gift</h3>
-                        <BsArrowRightCircle style={{ width: '25px', height: '25px' }} />
-                        <div className='tag' ><AiFillTags style={{ width: '32px', height: '32px' }} /></div>
-
-                    </div>
-                    <div className='item'>
-                        <div className="product"><img src={img6} alt="" style={{ paddingLeft: "2rem", width: '160px', height: '120px', borderRadius: "3px", marginTop: '5px' }} />
-                            <div className="desc">
-                                <p>Brown Elegant Statement Handbag </p>
-                                <p>price :  $79.99</p></div>
-                        </div>
-                        <div className="btns">
-                            +  <button className='btn1'> quantity </button> -
-
+                                <div className="desc">
+                                    <p>{item.description}</p>
+                                    <p>price :  ${item.price}</p>
+                                </div>
+                            </div>
+                            <div className="btns">
+                                {/* ... */}
+                            </div>
                         </div>
                     </div>
+                ))}
 
-                </div>
-
-            </div>
-
-            <div className='cart-footer'>
-                <div style={{ display: "flex", gap: "2rem" }}>
-                    <FiCircle style={{ width: '20px', height: '20px' }} />
-                    <p>All</p>
-                </div>
-                <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem" }}>
-                    <p>Total: ksh 324</p>
-                    <button className='btn2'>Check Out</button>
-                </div>
-
-
+                {/* Rest of the code ... */}
             </div>
         </>
     )
 }
 
-export default Cart
+export default Cart;

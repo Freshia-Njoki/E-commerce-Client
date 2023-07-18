@@ -2,8 +2,12 @@ import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 import '../Dashboard/dashboard.css'
 
 
-function Card({ img, productName, price, description }) {
-    console.log(img)
+function Card({ img, productName, price, description, toggle }) {
+
+
+
+
+
     return (
         <div className='card-section'>
             <div className="card">
@@ -14,6 +18,7 @@ function Card({ img, productName, price, description }) {
             <div className="description"><p>{productName}</p>
                 <p>{description}</p>
                 <p>price: {price}</p></div>
+
             <div className="rating" style={{ marginLeft: "1rem" }}> <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiOutlineStar /> </div>
         </div>
     )

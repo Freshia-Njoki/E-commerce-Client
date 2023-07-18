@@ -26,38 +26,74 @@ function Rates() {
                 <div className="flex">
                     <div>chart</div>
                 </div>
-                <div>
+                {/* <div className="table-container">
                     {shippingData.map((shippingItem) => (
-                        <div key={shippingItem.id} className='items'>
+                        <div key={shippingItem.id} className="card">
+                            <div className="table-row">
+                                <span className="cards">Shipping rate</span>
+                                <span>{shippingItem.shippingRate}</span>
+                            </div>
 
-                            <span className='cards'>Shipping rate</span>
-                            <div><ul>{shippingItem.shippingRate}</ul> </div>
+                            <div className="table-row">
+                                <span className="cards">Shipping method: </span>
+                                <span>{shippingItem.shippingMethod}</span>
+                            </div>
 
-                            <div>
-                                <span className='cards'>Shipping method: </span>
-                                <ul>{shippingItem.shippingMethod}</ul>
+                            <div className="table-row">
+                                <span className="cards">Delivery timeframe: </span>
+                                <span>{shippingItem.deliveryTimeframe}</span>
+                            </div>
+
+                            <div className="table-row">
+                                <span className="cards">Region rule: </span>
+                                <span>{shippingItem.regionRule}</span>
+                            </div>
+
+                            <div className="table-row">
+                                <span className="cards">Order Size: </span>
+                                <span>{shippingItem.orderSize}</span>
                             </div>
 
                             <hr />
-                            <div>
-                                <span className='cards'>Delivery timeframe: </span>
-                                <ul>{shippingItem.deliveryTimeframe}</ul>
-                            </div>
-
-                            <div>
-                                <span className='cards'>Region rule: </span>
-                                <ul>{shippingItem.regionRule}</ul>
-                            </div>
-
-                            <div>
-                                <span className='cards'>Order Size: </span>
-                                <ul>{shippingItem.orderSize}</ul>
-                            </div>
-
                         </div>
                     ))}
+                </div> */}
+                <div className="table-container">
+                    {shippingData.map((shippingItem) => (
+                        <div key={shippingItem.id} className="card">
+                            <span className="row-title">Shipping Details:</span>
+                            <div className="table">
+                                <div className="table-row">
+                                    <span className="cards">Shipping rate:</span>
+                                    <span>{shippingItem.shippingRate}</span>
+                                </div>
 
+                                <div className="table-row">
+                                    <span className="cards">Shipping method:</span>
+                                    <span>{shippingItem.shippingMethod}</span>
+                                </div>
+
+                                <div className="table-row">
+                                    <span className="cards">Delivery timeframe:</span>
+                                    <span>{shippingItem.deliveryTimeframe}</span>
+                                </div>
+
+                                <div className="table-row">
+                                    <span className="cards">Region rule:</span>
+                                    <span>{shippingItem.regionRule}</span>
+                                </div>
+
+                                <div className="table-row">
+                                    <span className="cards">Order Size:</span>
+                                    <span>{shippingItem.orderSize}</span>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
+
+
+
             </div>
         </div>
     );
