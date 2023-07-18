@@ -16,22 +16,28 @@ import Axios from 'axios'
 function Products() {
 
 
-    const { register, handleSubmit, formState: { errors } } = useForm(
-
-    );
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (data) => {
-        Axios.post("http://localhost:8081/products/", data)
+        const formData = new FormData();
+        formData.append('image', data.image[0]); // Append the file to the form data
+        formData.append('name', data.name);
+        formData.append('description', data.description);
+        formData.append('price', data.price);
+        formData.append('quantity', data.quantity);
 
+
+        Axios.post("http://localhost:8081/products/", formData)
             .then(({ data }) => {
-                //validate to check if the data.token is present
-                console.log(data)
+                // validate to check if the data.token is present
+                console.log(data);
             })
             .catch(({ response }) => {
-                alert(response.data.error)
+                alert(response.data.error);
 
             });
-    }
+    };
+
     return (
         <div>
             <div className="products-nav">
@@ -126,12 +132,17 @@ function Products() {
                         </div>
 
                         <div>
-                            <form action="" encType="multipart/form-data" onSubmit={handleSubmit(onSubmit)}>
-                                <input type="file" id="image" {...register('image')} />
-                                <input type="text" label="Name" id="name" {...register('name')} />
-                                <input type="text" label="Description" id="Description" {...register('description')} />
-                                <input type="number" label="Price" id="Price"  {...register('price')} />
-                                <input type="number" label="Quantity" id="Quantity" {...register('quantity')} />
+                            <form method="post" enctype="multipart/form-data" onSubmit={handleSubmit(onSubmit)}>
+
+                                <input type="file" id="image" {...register('image')} name='image' />
+                                <label htmlFor="name">Enter the product name</label>
+                                <input type="text" label="Name" id="name" {...register('name')} /><br />
+                                <label htmlFor="Description">Product description</label>
+                                <input type="text" label="Description" id="Description" {...register('description')} /><br />
+                                <label htmlFor="Price">Price</label><br />
+                                <input type="number" label="Price" id="Price"  {...register('price')} /> <br />
+                                <label htmlFor="Quantity">Quantity</label><br />
+                                <input type="number" label="Quantity" id="Quantity" {...register('quantity')} /><br />
                                 <button type="submit">Upload</button>
                             </form>
                         </div>

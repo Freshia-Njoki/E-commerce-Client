@@ -1,16 +1,19 @@
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 import '../../pages/Dashboard/dashboard.css'
-import img from '../../assets/img.avif'
 
-function Card() {
+
+function Card({ img, productName, price, description }) {
+    console.log(img)
     return (
         <div className='card-section'>
             <div className="card">
-                <div><img className='img' src={img} alt="" /></div>
+                <div><img className='img' src={`http://localhost:8081${img}`} alt="" /></div>
             </div>
 
-            <div className="description"><p>product name</p>
-                <p>price: $55.50</p></div>
+
+            <div className="description"><p>{productName}</p>
+                <p>{description}</p>
+                <p>price: {price}</p></div>
             <div className="rating" style={{ marginLeft: "1rem" }}> <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiOutlineStar /> </div>
         </div>
     )
