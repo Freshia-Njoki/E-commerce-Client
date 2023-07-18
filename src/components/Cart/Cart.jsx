@@ -1,23 +1,15 @@
-import { useContext } from 'react';
-import { BsArrowLeftCircle, BsBoxSeam, BsArrowRightCircle } from 'react-icons/bs';
-import { AiFillTags } from 'react-icons/ai';
-import { FiCheckCircle, FiCircle } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
-// Replace 'path/to/your/context/file' with the correct path to your cart context file
-import img5 from '../../assets/image 5.jpg';
-import img6 from '../../assets/image 6.jpg';
-import './cart.css';
-import PlaceOrder from '../placeorder/PlaceOrder';
+import React, { useState, useContext } from 'react';
 import { Context } from '../context/UserDashboardContext/Context';
+import PaymentForm from '../Stripe/PaymentForm';
 
 function Cart() {
-    //usestate handle bag quantity
-
-    // Fetch the cart state from the context
-    const state = useContext(Context);
     const { cart } = useContext(Context);
+    const [showPaymentForm, setShowPaymentForm] = useState(false);
 
-    console.log(cart)
+    const handleOrderClick = () => {
+        // Set the state to true to show the payment form
+        setShowPaymentForm(true);
+    };
 
     return (
         <>
@@ -40,6 +32,8 @@ function Cart() {
                                 <div className="desc">
                                     <p>{item.description}</p>
                                     <p>price :  ${item.price}</p>
+                                    {/* Add a button to trigger the payment process */}
+                                    <button onClick={handleOrderClick}>Order</button>
                                 </div>
                             </div>
                             <div className="btns">
@@ -51,8 +45,11 @@ function Cart() {
 
                 {/* Rest of the code ... */}
             </div>
+
+            {/* Conditionally render the PaymentForm component based on showPaymentForm state */}
+            {showPaymentForm && <PaymentForm />}
         </>
-    )
+    );
 }
 
 export default Cart;
