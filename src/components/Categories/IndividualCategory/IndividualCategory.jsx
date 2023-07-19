@@ -1,10 +1,12 @@
 import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
-import Card from '../components/card/Card';
-import { Context } from '../components/context/UserDashboardContext/Context';
+import Card from '../../card/Card';
+import { Context } from '../../context/UserDashboardContext/Context';
 
-function Products() {
+function IndividualCategory({ category }) {
+
     const [products, setProducts] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
     const [isLoading, setLoading] = useState(true);
 
     const { cart, dispatch } = useContext(Context);
@@ -22,6 +24,19 @@ function Products() {
                 setLoading(false);
             });
     }, []);
+
+
+    useEffect(() => {
+        // Filter products based on the provided category prop
+        if (!category) {
+            // If category is not provided, show all products
+            setFilteredProducts(products);
+        } else {
+            setFilteredProducts(products.filter((product) => product.category === category));
+        }
+    }, [category, products]);
+
+    console.log(filteredProducts)
 
     const handleClick = (item) => {
         // Check if the item already exists in the cart based on some unique identifier (e.g., product ID)
@@ -44,14 +59,13 @@ function Products() {
                 {isLoading ? (
                     <p>Loading...</p> // Display a loading message or spinner while loading
                 ) : (
-                    products.map((product, index) => (
+                    filteredProducts.map((product, index) => (
                         <div key={index}>
                             <Card
                                 key={product.id}
                                 productName={product.name}
                                 price={product.price}
                                 description={product.description}
-
                                 img={product.image_path}
                                 handleClick={() => handleClick(product)} // Pass the handleClick function as a prop
                             />
@@ -63,4 +77,4 @@ function Products() {
     );
 }
 
-export default Products;
+export default IndividualCategory;

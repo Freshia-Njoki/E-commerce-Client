@@ -25,6 +25,7 @@ function Products() {
         formData.append('description', data.description);
         formData.append('price', data.price);
         formData.append('quantity', data.quantity);
+        formData.append('category', data.category)
 
 
         Axios.post("http://localhost:8081/products/", formData)
@@ -127,7 +128,9 @@ function Products() {
                                 <label htmlFor="Price">Price</label><br />
                                 <input type="number" label="Price" id="Price"  {...register('price')} /> <br />
                                 <label htmlFor="Quantity">Quantity</label><br />
-                                <input type="number" label="Quantity" id="Quantity" {...register('quantity')} /><br />
+                                <input type="number" label="Quantity" id="quantity"  {...register('quantity')} /> <br />
+                                <label htmlFor="Category">Category</label><br />
+                                <input type="text" label="Category" id="Category" {...register('category')} /><br />
                                 <button type="submit">Upload</button>
                             </form>
                         </div>
