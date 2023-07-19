@@ -36,7 +36,7 @@ function AdminSideNav() {
     }
     return (
         <div >
-            <Sidebar className='sidebar'>
+            <Sidebar className='sidebar' >
                 <Menu menuItemStyles={{
                     button: {
                         // the active class will be added automatically by react router

@@ -1,41 +1,39 @@
-import React from 'react';
-import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
+import React, { useEffect, useState } from "react";
+import { Elements } from "@stripe/react-stripe-js";
+import CheckoutForm from "./Checkout";
+import { loadStripe } from "@stripe/stripe-js";
 
-const PaymentForm = () => {
-    const stripe = useStripe();
-    const elements = useElements();
-
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        if (!stripe || !elements) {
-            // Stripe.js has not loaded yet, wait for it to initialize.
-            return;
-        }
-
-        const cardElement = elements.getElement(CardElement);
-
-        const { error, paymentMethod } = await stripe.createPaymentMethod({
-            type: 'card',
-            card: cardElement,
-        });
-
-        if (error) {
-            console.log(error);
-        } else {
-
-            alert(paymentMethod.id);
-
-        }
-    };
-
-    return (
-        <form onSubmit={handleSubmit}>
-            <CardElement />
-            <button type="submit" disabled={!stripe}>
-                Pay
-            </button>
-        </form>
+function Payment() {
+    const stripePromise = loadStripe(
+        "pk_test_51NVI3GJLwJLu0JfmUJR4YAk3YfKnY3WEn5z0BdO825TRzqxTzeJcMLMltJCX6tOb5hVblXJgejwaqVCb38OkC2vQ008N7pR4jT"
     );
-};
+    const [clientSecret, setClientSecret] = useState("");
 
-export default PaymentForm;
+    useEffect(() => {
+        fetch("http://localhost:8081/create-payment-intent", {
+            method: "POST",
+            body: JSON.stringify({}),
+        })
+            .then(async (result) => {
+                var { clientSecret } = await result.json();
+                setClientSecret(clientSecret);
+            })
+            .catch((error) => {
+                console.error("Error fetching client secret:", error);
+            });
+    }, []);
+
+    console.log(stripePromise);
+    return (
+        <>
+
+            {clientSecret && (
+                <Elements stripe={stripePromise} options={{ clientSecret }}>
+                    <CheckoutForm />
+                </Elements>
+            )}
+        </>
+    );
+}
+
+export default Payment;

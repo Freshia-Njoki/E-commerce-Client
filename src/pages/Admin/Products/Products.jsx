@@ -58,7 +58,7 @@ function Products() {
                 </div>
 
                 <div className='item'>
-                    <div className="mini-items">
+                    {/* <div className="mini-items">
 
                         <div style={{ display: 'flex' }}>
                             <img src={img6} alt="" />
@@ -69,7 +69,7 @@ function Products() {
                             <span className='cards'>Beauty</span>
                         </div>
 
-                    </div>
+                    </div> */}
                     <div className='main-product--content'>
                         <div>
                             <img src={img8} alt="" style={{ height: '150px', width: '150px', borderRadius: '3px', marginRight: '1rem' }} />

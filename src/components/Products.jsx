@@ -7,16 +7,22 @@ function Products() {
     const [products, setProducts] = useState([]);
     const [isLoading, setLoading] = useState(true);
 
-    const { dispatch } = useContext(Context);
-    const state = useContext(Context)
+    const { cart, dispatch } = useContext(Context);
 
     const handleClick = (item) => {
-        alert('Item added to cart ')
+        // Check if the item already exists in the cart based on some unique identifier (e.g., product ID)
+        const existingItem = cart.find((cartItem) => cartItem.id === item.id);
 
-        // Assuming 'item' contains the necessary details of the product to be added to the cart
-        dispatch({ type: 'ADD_TO_CART', payload: item });
+        if (existingItem) {
+            // If the item exists, update the quantity (or price) by doubling it
+            dispatch({ type: 'UPDATE_CART_ITEM', payload: { ...existingItem, price: existingItem.price * 2 } });
+        } else {
+            // If the item doesn't exist, add it to the cart
+            dispatch({ type: 'ADD_TO_CART', payload: item });
+        }
+
+        alert('Item added to cart');
     };
-    console.log(state)
 
     useEffect(() => {
         // Fetch products from the server
@@ -46,9 +52,7 @@ function Products() {
                                 price={product.price}
                                 description={product.description}
                                 img={product.image_path}
-
-                            >
-                            </Card>
+                            />
                         </div>
                     ))
                 )}

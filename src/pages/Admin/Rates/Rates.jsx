@@ -23,9 +23,9 @@ function Rates() {
     return (
         <div>
             <div className="main-content">
-                <div className="flex">
+                {/* <div className="flex">
                     <div>chart</div>
-                </div>
+                </div> */}
                 {/* <div className="table-container">
                     {shippingData.map((shippingItem) => (
                         <div key={shippingItem.id} className="card">
@@ -65,27 +65,23 @@ function Rates() {
                             <div className="table">
                                 <div className="table-row">
                                     <span className="cards">Shipping rate:</span>
-                                    <span>{shippingItem.shippingRate}</span>
+                                    {/* <span>{shippingItem.shippingRate}</span> */}
                                 </div>
 
                                 <div className="table-row">
                                     <span className="cards">Shipping method:</span>
-                                    <span>{shippingItem.shippingMethod}</span>
+                                    {/* <span>{shippingItem.shippingMethod}</span> */}
                                 </div>
 
                                 <div className="table-row">
                                     <span className="cards">Delivery timeframe:</span>
-                                    <span>{shippingItem.deliveryTimeframe}</span>
+                                    {/* <span>{shippingItem.deliveryTimeframe}</span> */}
                                 </div>
 
-                                <div className="table-row">
-                                    <span className="cards">Region rule:</span>
-                                    <span>{shippingItem.regionRule}</span>
-                                </div>
 
                                 <div className="table-row">
                                     <span className="cards">Order Size:</span>
-                                    <span>{shippingItem.orderSize}</span>
+                                    {/* <span>{shippingItem.orderSize}</span> */}
                                 </div>
                             </div>
                         </div>

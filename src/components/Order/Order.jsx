@@ -23,7 +23,7 @@ function order() {
     return (
         <div className='order-page'>
             <div className="navbar">
-                <BsArrowLeftCircle style={{ width: '32px', height: '32px' }} />
+                <BsArrowLeftCircle style={{ width: '32px', height: '30px' }} />
                 <h3 style={{ marginLeft: "30%" }}>Order Updates</h3>
             </div>
 
@@ -35,7 +35,7 @@ function order() {
 
                 <div className='footer-order'>
                     <p className="date">{currentDate}</p>
-                    <p className="time">{currentTime}</p>
+                    {/* <p className="time">{currentTime}</p> */}
 
                 </div>
 
@@ -49,7 +49,7 @@ function order() {
 
                 <div className='footer-order'>
                     <p className="date">{currentDate}</p>
-                    <p className="time">{currentTime}</p>
+                    {/* <p className="time">{currentTime}</p> */}
                 </div>
 
             </div>
@@ -62,7 +62,7 @@ function order() {
 
                 <div className='footer-order'>
                     <p className="date">{currentDate}</p>
-                    <p className="time">{currentTime}</p>
+                    {/* <p className="time">{currentTime}</p> */}
                 </div>
 
             </div>

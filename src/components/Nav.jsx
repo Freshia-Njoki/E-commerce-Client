@@ -23,7 +23,6 @@ function Nav() {
             <h4>Lorem ipsum dolor.</h4>
             <li>Lorem ipsum dolor sit.</li>
             <li>Lorem ipsum dolor sit.</li>
-
         </div>
     );
 

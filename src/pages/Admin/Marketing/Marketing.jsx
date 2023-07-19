@@ -49,13 +49,13 @@ function Marketing() {
 
                     </div>
 
-                    <div className='offer'>
+                    {/* <div className='offer'>
 
                         <div><span className='cards'>Offers</span></div>
                         <div><span className='cards'>Rate 16%</span></div>
                         <div><button type="button">Update</button></div>
 
-                    </div>
+                    </div> */}
 
                     <div >
                         <h4>Top orders</h4>

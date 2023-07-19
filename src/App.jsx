@@ -11,6 +11,7 @@ import Footer from './components/Footer/Footer'
 import Dashboard from './components/Dashboard/Dashboard';
 import PlaceOrder from './components/placeorder/PlaceOrder';
 import AdminDashboard from './pages/Admin/Dashboard/AdminDashboard';
+import Completion from './components/Stripe/Completion';
 // import BarChart from './components/Charts/BarChart';
 // import { useState } from 'react';
 // import { UserData } from './Data';
@@ -34,6 +35,7 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path="/completion" element={<Completion />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login />} />
           <Route path='/logout' element={<Logout />} />
