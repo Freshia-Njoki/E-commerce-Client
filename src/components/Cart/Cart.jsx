@@ -5,24 +5,18 @@ import { useNavigate } from 'react-router-dom';
 
 function Cart() {
     const { cart, dispatch } = useContext(Context);
-
     const navigate = useNavigate();
 
     const handleOrderClick = (cartName, cartPrice) => {
-        console.log(cartName, cartPrice)
-
-        // Navigate to the "/placeorder" route with cart data as state
+        // Directly call the navigate function to navigate to the new route
         navigate('/placeorder', { state: { cartName, cartPrice } });
     };
 
     const handleRemoveItem = (createdAt) => {
-        // Dispatch the REMOVE_ITEM action with the item's createdAt as payload
-        dispatch({ type: "REMOVE_ITEM", payload: createdAt });
+        dispatch({ type: 'REMOVE_ITEM', payload: createdAt });
     }
 
     console.log(cart);
-
-
 
     return (
         <>
@@ -38,7 +32,7 @@ function Cart() {
                                 <div className="desc">
                                     <p>{item.description}</p>
                                     <p>price :  ${item.price}</p>
-                                    <button onClick={handleOrderClick(item.name, item.price)}>Order</button>
+                                    <button onClick={() => handleOrderClick(item.name, item.price)}>Order</button>
                                     <button onClick={() => handleRemoveItem(item.created_at)}>Remove Item</button>
                                 </div>
                             </div>
@@ -46,8 +40,6 @@ function Cart() {
                     </div>
                 ))}
             </div>
-
-
         </>
     );
 }
