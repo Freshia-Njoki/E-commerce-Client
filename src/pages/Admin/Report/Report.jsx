@@ -8,7 +8,7 @@ function Report() {
                 <div>
                     <div className="sales">graph</div>
                     <div> <h4>Comments:</h4>
-                        <span className='cards'></span>
+                        <span className='card'></span>
                     </div>
                 </div>
 
@@ -16,12 +16,12 @@ function Report() {
                     <h3>Reviews</h3>
                     <div className="flex">
 
-                        <span className='cards'>Comments</span>
+                        <span className='card'>Comments</span>
 
                     </div>
                     <div>
                         <h5>Monthly Revenue:</h5>
-                        <span className='cards'>ksh:____</span>
+                        <span className='card'>ksh:____</span>
 
                     </div>
                 </div>

@@ -15,7 +15,7 @@ function Marketing() {
         //update functionality
         <>
             <div>
-                <div className="nav">
+                {/* <div className="nav">
                     <div className='logo'>
 
                         <div className="infor">
@@ -29,10 +29,8 @@ function Marketing() {
                             <p>Freshia</p>
                         </div>
 
-
-
                     </div>
-                </div>
+                </div> */}
                 <div className="marketing">
                     <div >
                         <img src={img9} alt="" style={{ height: '300px', width: '300px', borderRadius: '3px' }} />

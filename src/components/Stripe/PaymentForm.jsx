@@ -22,9 +22,9 @@ const PaymentForm = () => {
         if (error) {
             console.log(error);
         } else {
-            // Handle successful payment, e.g., send paymentMethod.id to your server for further processing
+
             alert(paymentMethod.id);
-            // You can then proceed to submit the order or process the payment on your server.
+
         }
     };
 

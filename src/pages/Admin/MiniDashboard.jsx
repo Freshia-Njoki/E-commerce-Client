@@ -22,7 +22,7 @@ function minidashboard() {
             .get('http://localhost:8081/revenue')
             .then((response) => {
                 const { data } = response;
-                const totalRevenue = data.data[0]?.total_revenue || 0; // Assuming the API response has { data: [{ total_revenue: number }] }
+                const totalRevenue = data.data[0]?.total_revenue || 0;
 
                 setTotalRevenue(totalRevenue);
             })
@@ -98,7 +98,7 @@ function minidashboard() {
                                 <p>phone</p>
                                 <p>$255</p>
                             </div>
-                            <div className="icon"><AiOutlineHeart /></div>
+                            {/* <div className="icon"><AiOutlineHeart /></div> */}
                         </div>
 
                         <div>
@@ -107,7 +107,7 @@ function minidashboard() {
                                 <p>bag</p>
                                 <p>$15.50</p>
                             </div>
-                            <div className="icon"><AiOutlineHeart /></div>
+                            {/* <div className="icon"><AiOutlineHeart /></div> */}
                         </div>
 
                         <div>
@@ -116,7 +116,7 @@ function minidashboard() {
                                 <p>clothes</p>
                                 <p>$20</p>
                             </div>
-                            <div className="icon"><AiOutlineHeart /></div>
+                            {/* <div className="icon"><AiOutlineHeart /></div> */}
                         </div>
 
                         <div>
@@ -125,7 +125,7 @@ function minidashboard() {
                                 <p>beauty</p>
                                 <p>$80</p>
                             </div>
-                            <div className="icon"><AiOutlineHeart /></div>
+                            {/* <div className="icon"><AiOutlineHeart /></div> */}
                         </div>
 
                         <div>
@@ -134,7 +134,7 @@ function minidashboard() {
                                 <p>beauty</p>
                                 <p>$11</p>
                             </div>
-                            <div className="icon"><AiOutlineHeart /></div>
+                            {/* <div className="icon"><AiOutlineHeart /></div> */}
                         </div>
 
                         <div>
@@ -143,7 +143,7 @@ function minidashboard() {
                                 <p>bag</p>
                                 <p>$25</p>
                             </div>
-                            <div className="icon"><AiOutlineHeart /></div>
+                            {/* <div className="icon"><AiOutlineHeart /></div> */}
                         </div>
 
                     </div>
