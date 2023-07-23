@@ -1,5 +1,5 @@
-import './footer.css'
 import { AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai'
+import './footer.css'
 
 function Footer() {
     const year = new Date().getFullYear()
