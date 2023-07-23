@@ -1,6 +1,6 @@
 const Reducer = (state, action) => {
     switch (action.type) {
-        case "LOGIN_SUCESS":
+        case "LOGIN_SUCCESS":
             return {
                 user: action.payload,
             }

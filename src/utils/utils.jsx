@@ -1,0 +1,1 @@
+export const apiDomain = 'https://e-commerceapi.azurewebsites.net';

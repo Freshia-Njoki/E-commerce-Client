@@ -3,6 +3,7 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import { useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form'
 import './loginform.css'
+import { apiDomain } from '../../utils/utils';
 import Axios from 'axios';
 
 function Signup() {
@@ -20,7 +21,7 @@ function Signup() {
     });
 
     const onSubmit = (data) => {
-        Axios.post("http://localhost:8081/auth/adminLogin", data)
+        Axios.post(`${apiDomain}/auth/adminLogin`, data)
 
             .then(({ data }) => {
                 //validate to check if the data.token is present
@@ -42,10 +43,10 @@ function Signup() {
                     <form className="form-inputs" onSubmit={handleSubmit(onSubmit)} >
                         <h3 className="sigupBanner">Log in </h3>
                         <label htmlFor="username">Admin name</label>
-                        <input type="text" id="username" placeholder='ruithaa' {...register("admin_name")} />
+                        <input type="text" id="username" placeholder='Ruitha' {...register("admin_name")} />
                         <p>{errors.admin_name?.message}</p>
                         <label htmlFor="email">Email Address</label>
-                        <input type="text" id="email" placeholder='ruithaa@gmail.com' {...register("email")} />
+                        <input type="text" id="email" placeholder='ruitha@gmail.com' {...register("email")} />
                         <p>{errors.email?.message}</p>
                         <label htmlFor="password">Password</label>
                         <input type="password" id='password' placeholder='ruitha@123'  {...register("password")} />
