@@ -11,6 +11,7 @@ import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Lege
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend)
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { apiDomain } from '../../utils/utils'
 
 function minidashboard() {
     const [totalRevenue, setTotalRevenue] = useState(null);
@@ -19,7 +20,7 @@ function minidashboard() {
 
     useEffect(() => {
         axios
-            .get('http://localhost:8081/revenue')
+            .get(`${apiDomain}/revenue`)
             .then((response) => {
                 const { data } = response;
                 const totalRevenue = data.data[0]?.total_revenue || 0;

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom';
 import './adminsignup.css'
+import { apiDomain } from '../../utils/utils';
 import Axios from 'axios'
 
 function LoginForm() {
@@ -24,7 +25,7 @@ function LoginForm() {
     });
 
     const Submit = (data) => {
-        Axios.post("http://localhost:8081/auth/adminRegister", data)
+        Axios.post(`${apiDomain}/auth/adminRegister`, data)
             .then((response) => {
                 response.data.message && alert(response.data.message);
 

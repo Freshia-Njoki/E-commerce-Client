@@ -3,6 +3,7 @@ import avatar from "../../../assets/Ellipse 100.jpg";
 import logo from "../../../assets/logo.jpg";
 import { useState, useEffect } from "react";
 import Axios from 'axios'
+import { apiDomain } from "../../../utils/utils";
 import './rates.css'
 
 function Rates() {
@@ -10,7 +11,7 @@ function Rates() {
 
     useEffect(() => {
         Axios
-            .get('http://localhost:8081/shipping')
+            .get(`${apiDomain}/shipping`)
             .then((response) => {
                 const { data } = response;
                 setShippingData(data);

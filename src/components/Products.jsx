@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import Card from '../components/card/Card';
+import { apiDomain } from '../utils/utils';
 import { Context } from '../components/context/UserDashboardContext/Context';
 
 function Products() {
@@ -12,7 +13,7 @@ function Products() {
     useEffect(() => {
         // Fetch products from the server
         axios
-            .get('http://localhost:8081/products')
+            .get(`${apiDomain}/products`)
             .then((response) => {
                 setProducts(response.data);
                 setLoading(false);

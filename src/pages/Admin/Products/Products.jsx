@@ -8,6 +8,7 @@ import img7 from '../../../assets/image 7.jpg'
 import img8 from '../../../assets/image 8.jpg'
 import avatar from '../../../assets/Ellipse 100.jpg'
 import logo from '../../../assets/logo.jpg'
+import { apiDomain } from '../../../utils/utils'
 import './products.css'
 import { useForm } from 'react-hook-form'
 import Axios from 'axios'
@@ -28,7 +29,7 @@ function Products() {
         formData.append('category', data.category)
 
 
-        Axios.post("http://localhost:8081/products/", formData)
+        Axios.post(`${apiDomain}/products/`, formData)
             .then(({ data }) => {
                 // validate to check if the data.token is present
                 console.log(data);

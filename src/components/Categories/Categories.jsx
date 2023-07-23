@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
 import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
-import image5 from '../../assets/image 5.jpg';
-import image6 from '../../assets/image 6.jpg';
-import image7 from '../../assets/image 7.jpg';
-import image8 from '../../assets/image 8.jpg';
-import image9 from '../../assets/image 9.jpg';
-import image10 from '../../assets/image 10.jpg';
 import './categories.css';
 import IndividualCategory from './IndividualCategory/IndividualCategory'; // Assuming this is the path to the IndividualCategory component
 
