@@ -11,7 +11,7 @@ function Footer() {
                     <a href="https://twitter.com/FreshiaNjoki2">< AiFillTwitterCircle className='icons' /></a>
                     <a href="https://www.linkedin.com/in/freshia-njoki"><AiFillLinkedin className='icons' /></a>
                 </div>
-                {/* <Link to="/TermsAndPrivacy" style={{ color: "purple" }}> Terms And Privacy</Link> */}
+
             </div>
 
         </>
