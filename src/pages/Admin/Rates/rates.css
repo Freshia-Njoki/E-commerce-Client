@@ -7,49 +7,15 @@
   color: white;
 }
 
-.items {
-  color: black;
-}
-
-.cards {
-  /* padding: 0.3rem; */
-}
-
 .table-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.card {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 1rem;
-  margin: 0.5rem;
-  width: 300px; /* Adjust the width of the card as needed */
-}
-
-.row-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.table {
-  display: grid;
-  grid-template-columns: auto auto; /* Adjust the number of columns as needed */
-  grid-gap: 0.5rem;
-}
-
-.table-row {
-  display: flex;
-  align-items: center;
-  /* gap: 2rem;
-  border: 1px solid red; */
+  height: 60vh;
 }
 
 .cards {
   font-weight: bold;
   margin-right: 1rem;
-  min-width: 120px; /* Adjust the width of the table column as needed */
+  /* gap: 0.2rem; */
 }
