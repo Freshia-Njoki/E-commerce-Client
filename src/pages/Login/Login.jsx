@@ -8,7 +8,9 @@ import { apiDomain } from '../../utils/utils';
 import './login.css'
 import { useContext } from 'react';
 import { Context } from '../../components/context/userContext/Context';
-
+import LoginForm from '../../components/adminsignup/AdminSignup';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
     const { user, dispatch } = useContext(Context);
@@ -36,14 +38,16 @@ function Login() {
 
             })
             .catch(({ response }) => {
-                alert(response.data.error)
+                const error = response.data.error;
+                toast.error(error);
 
             });
+        toast.success("Login successful");
     }
 
     return (
         <>
-            <div className='login'>
+            <div className='Login'>
                 <div className='login-form'>
 
                     <div >
@@ -55,19 +59,20 @@ function Login() {
                         <h4>Log in</h4>
 
                         <form className="form-inputs" onSubmit={handleSubmit(onSubmit)}>
-                            <label htmlFor="text">User name</label>
-                            <input type="text" id="text" placeholder='freshia' {...register("username")} />
-                            <p>{errors.username?.message}</p>
+                            <label htmlFor="text">UserName</label>
+                            <input type="text" id="text" placeholder='ruth' {...register("username")} />
+                            {errors.username && toast.error(errors.username?.message)}
                             <label htmlFor="password">Password</label>
-                            <input type="password" id='password' placeholder='freshia@123'  {...register("password")} />
-                            <p>{errors.password?.message}</p>
-                            {/* navigate upon succesful signup-remove link */}
-                            {/* <Link to='/dashboard'></Link> */}
+                            <input type="password" id='password' placeholder='ruth@123'  {...register("password")} />
+                            {errors.password && toast.error(errors.password?.message)}
                             <input className='loginBtn' type="submit" value="Login" />
 
                             <Link to='/signup'><input className='signupBtn' type="submit" value="Sign up" /></Link>
                         </form>
                     </div>
+                </div>
+                <div>
+                    <LoginForm />
                 </div>
             </div >
 

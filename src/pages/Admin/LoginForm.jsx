@@ -5,6 +5,8 @@ import { useForm } from 'react-hook-form'
 import './loginform.css'
 import { apiDomain } from '../../utils/utils';
 import Axios from 'axios';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Signup() {
     const navigate = useNavigate();
@@ -31,7 +33,8 @@ function Signup() {
 
             })
             .catch(({ response }) => {
-                alert(response.data.error)
+                const error = response.data.error;
+                toast.error(error);
 
             });
     }
@@ -43,14 +46,15 @@ function Signup() {
                     <form className="form-inputs" onSubmit={handleSubmit(onSubmit)} >
                         <h3 className="sigupBanner">Log in </h3>
                         <label htmlFor="username">Admin name</label>
-                        <input type="text" id="username" placeholder='Ruitha' {...register("admin_name")} />
-                        <p>{errors.admin_name?.message}</p>
+                        <input type="text" id="username" placeholder='susan' {...register("admin_name")} />
+
+                        {errors.admin_name && toast.error(errors.admin_name?.message)}
                         <label htmlFor="email">Email Address</label>
-                        <input type="text" id="email" placeholder='ruitha@gmail.com' {...register("email")} />
-                        <p>{errors.email?.message}</p>
+                        <input type="text" id="email" placeholder='susan@gmail.com' {...register("email")} />
+                        {errors.email && toast.error(errors.email?.message)}
                         <label htmlFor="password">Password</label>
-                        <input type="password" id='password' placeholder='ruitha@123'  {...register("password")} />
-                        <p>{errors.password?.message}</p>
+                        <input type="password" id='password' placeholder='susan@123'  {...register("password")} />
+                        {errors.password && toast.error(errors.password?.message)}
                         <input className='registerBtn' type="submit" style={{ marginTop: "30PX" }} />
 
 

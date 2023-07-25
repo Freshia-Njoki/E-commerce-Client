@@ -6,27 +6,13 @@
   color: white;
   border-radius: 16px;
   padding: 30px;
+  height: 57vh;
+}
 
-  width: 40%;
-  height: 6=70%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.loginBanner {
-  margin: 10px;
-}
 .form-inputs input {
   margin-bottom: 1.5rem;
   /* margin-top: 1rem; */
   padding: 5px 90px;
-}
-.checkbox {
-  display: flex;
-  margin-top: 5px;
-  align-items: center;
-  gap: 5px;
 }
 
 .btn {

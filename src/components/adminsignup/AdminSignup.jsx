@@ -42,7 +42,7 @@ function LoginForm() {
         <div className='login'>
             <div className="admin-form">
                 <form className="form-inputs" onSubmit={handleSubmit(Submit)}>
-                    <h3 className="loginBanner">Set up your account </h3>
+                    <h3 className="loginBanner">Admin Set up Account </h3>
                     <p style={{ color: 'white' }}>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
 
                     <input type="text" placeholder='Admin Name' {...register("admin_name")} />
@@ -58,10 +58,6 @@ function LoginForm() {
                     <p>{errors.password?.message}</p>
 
 
-                    {/* <div className="checkbox">
-                        <input type="checkbox" />
-                        <p style={{ color: 'white' }}>Confirm Password</p>
-                    </div> */}
                     <input className='btn submitBtn animatedButton' type="submit" placeholder="Continue" style={{ marginTop: "30PX" }} />
 
                     {/* <button className='btn submitBtn animatedButton'></button> */}

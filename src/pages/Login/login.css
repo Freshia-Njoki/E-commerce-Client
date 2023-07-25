@@ -1,18 +1,17 @@
-.login {
-  height: 80vh;
-  margin-bottom: 5rem;
+.Login {
+  height: 68vh;
+  padding: 4rem;
+  gap: 5rem;
+  display: flex;
+  flex-direction: row;
 }
+
 .login-form {
   color: white;
   border-radius: 16px;
   padding: 30px;
   background-color: #4e4cc4;
   width: 40%;
-  height: 60%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .login-form h1 {
@@ -31,10 +30,6 @@
 .form-inputs {
   font-size: 20px;
 }
-
-.form-inputs p {
-  color: red;
-}
 .form-inputs input {
   display: flex;
   flex-direction: column;
@@ -47,20 +42,14 @@
 }
 
 .loginBtn {
-  background-color: #4e4cc4;
-  border-radius: 8px;
-  padding: 5px 90px;
-  color: white;
-  border: 1px solid grey;
-}
-
-/* .loginBtn:hover {
-  cursor: pointer;
-  transition-delay: 0.s;
-  background-color: whitesmoke;
-} */
-.signupBtn {
   border-radius: 8px;
   padding: 5px 90px;
   border: none;
+}
+
+.signupBtn {
+  border-radius: 8px;
+  padding: 5px 90px;
+  color: grey;
+  border: 1px solid grey;
 }

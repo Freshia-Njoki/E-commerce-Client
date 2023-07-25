@@ -5,6 +5,8 @@ import { UIContextProvider } from './components/context/UserDashboardContext/Con
 import { ContextProvide } from './components/context/adminDashboardContext/Context.jsx'
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 // Replace 'your_stripe_publishable_key' with your actual Publishable Key from Stripe
@@ -19,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Elements stripe={stripePromise}>
           <App />
         </Elements>
+        <ToastContainer />
       </ContextProvide>
     </UIContextProvider>
   </ContextProvider>
