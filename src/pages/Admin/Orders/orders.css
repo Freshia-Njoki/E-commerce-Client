@@ -1,23 +1,22 @@
 .order-content {
   background-color: #4e4cc4;
-  height: 75vh;
+  height: 80vh;
   padding: 1rem;
-  margin: 0.2rem;
   border-radius: 3px;
 }
 
 .nav {
   display: flex;
   flex-direction: row;
-  width: 200vh;
-  height: 10vh;
+  width: 20vh;
+  border-radius: 3px;
+  padding-left: 5px;
+  background-color: whitesmoke;
+  /* height: 10vh; */
   align-items: center;
   margin: 0rem 0rem 0rem 1rem;
 }
 
-.infor h3 {
-  margin-top: 2rem;
-}
 .logo {
   display: flex;
   gap: 60rem;
@@ -29,18 +28,8 @@
   padding: 2rem;
 }
 
-.avr {
-  display: flex;
-  gap: 1rem;
-}
-.avr img {
-  border-radius: 50%;
-  height: 30px;
-}
-
 .minibar {
   display: flex;
-  padding-top: 1rem;
   flex-direction: row;
 }
 
@@ -58,14 +47,6 @@
   gap: 1rem;
   margin: 2rem;
 }
-/* .date {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  padding-left: 0rem;
-  width: 10vh;
-  border: 1px solid red;
-} */
 
 .time input {
   height: 40px;
@@ -76,7 +57,14 @@
 }
 
 .items {
-  display: flex;
-  flex-direction: row;
-  height: 15rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.item {
+  background-color: whitesmoke;
+  gap: 0.5rem;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

@@ -1,6 +1,3 @@
-import { MdNotificationsNone } from "react-icons/md";
-import avatar from "../../../assets/Ellipse 100.jpg";
-import logo from "../../../assets/logo.jpg";
 import { useState, useEffect } from "react";
 import Axios from 'axios'
 import { apiDomain } from "../../../utils/utils";

@@ -4,15 +4,14 @@ import './order.css'
 
 function order() {
     const [currentDate, setCurrentDate] = useState('');
-    const [currentTime, setCurrentTime] = useState('');
+
 
     useEffect(() => {
         const intervalId = setInterval(() => {
             const now = new Date();
             const date = now.toLocaleDateString();
-            const time = now.toLocaleTimeString();
             setCurrentDate(date);
-            setCurrentTime(time);
+
         }, 1000);
 
         return () => {
@@ -35,7 +34,7 @@ function order() {
 
                 <div className='footer-order'>
                     <p className="date">{currentDate}</p>
-                    {/* <p className="time">{currentTime}</p> */}
+
 
                 </div>
 
@@ -49,7 +48,6 @@ function order() {
 
                 <div className='footer-order'>
                     <p className="date">{currentDate}</p>
-                    {/* <p className="time">{currentTime}</p> */}
                 </div>
 
             </div>
@@ -62,7 +60,6 @@ function order() {
 
                 <div className='footer-order'>
                     <p className="date">{currentDate}</p>
-                    {/* <p className="time">{currentTime}</p> */}
                 </div>
 
             </div>

@@ -31,29 +31,29 @@ export default function MainNav() {
                         <Products />
                     </div>
                 )
-                    : ui === 'marketing' ? (
-                        <div className="mainnav_wrapper">
+                    // : ui === 'marketing' ? (
+                    //     <div className="mainnav_wrapper">
 
-                            <Marketing />
+                    //         <Marketing />
+                    //     </div>
+                    // )
+                    : ui === 'rates' ? (
+                        <div className='container'>
+
+                            <Rates />
+                        </div>
+                    ) : ui === 'reports' ? (
+                        <div className='container'>
+
+                            <Report />
                         </div>
                     )
-                        : ui === 'rates' ? (
+                        : ui === 'logout' ? (
                             <div className='container'>
-
-                                <Rates />
+                                <Logout />
                             </div>
-                        ) : ui === 'reports' ? (
-                            <div className='container'>
-
-                                <Report />
-                            </div>
-                        )
-                            : ui === 'logout' ? (
-                                <div className='container'>
-                                    <Logout />
-                                </div>
-                            ) :
-                                null}
+                        ) :
+                            null}
         </div>
     );
 }

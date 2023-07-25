@@ -19,7 +19,7 @@ function AdminSidebar() {
                     <MenuItem className="menu">Dashboard </MenuItem>
                     <MenuItem className="menu" component={<Link to="/orders" />} >Orders </MenuItem>
                     <MenuItem className="menu" component={<Link to="/products" />}>Products </MenuItem>
-                    <MenuItem className="menu" component={<Link to="/marketing" />}>Marketing </MenuItem>
+                    {/* <MenuItem className="menu" component={<Link to="/marketing" />}>Marketing </MenuItem> */}
                     <MenuItem className="menu" component={<Link to="/rates" />}>Rates </MenuItem>
                     <MenuItem className="menu" component={<Link to="/report" />}>Reports </MenuItem>
                     <MenuItem className="menu" component={<Link to="/adminlogout" />}>Log Out </MenuItem>

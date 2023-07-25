@@ -20,10 +20,10 @@ function AdminSideNav() {
         dispatch({ type: 'PRODUCTS', payload: 'products' })
 
     }
-    const handleMarketing = () => {
-        dispatch({ type: 'MARKETING', payload: 'marketing' })
+    // const handleMarketing = () => {
+    //     dispatch({ type: 'MARKETING', payload: 'marketing' })
 
-    }
+    // }
     const handleRates = () => {
         dispatch({ type: 'RATES', payload: 'rates' })
 
@@ -53,7 +53,7 @@ function AdminSideNav() {
                     <MenuItem className="menu" onClick={handleMinidashboard}>Dashboard </MenuItem>
                     <MenuItem className="menu" onClick={handleOrders}>Orders </MenuItem>
                     <MenuItem className="menu" onClick={handleProducts}>Products </MenuItem>
-                    <MenuItem className="menu" onClick={handleMarketing}>Marketing </MenuItem>
+                    {/* <MenuItem className="menu" onClick={handleMarketing}>Marketing </MenuItem> */}
                     <MenuItem className="menu" onClick={handleRates}>Rates </MenuItem>
                     <MenuItem className="menu" onClick={handleReports}>Reports </MenuItem>
                     <MenuItem className="menu" onClick={handleLogout}>Logout</MenuItem>

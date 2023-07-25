@@ -48,7 +48,6 @@
 
 .spans {
   display: flex;
-  color: whitesmoke;
   margin: 1rem;
 }
 
@@ -61,6 +60,5 @@
 .span1 {
   display: flex;
   gap: 5rem;
-  color: whitesmoke;
   margin: 0.5rem;
 }
