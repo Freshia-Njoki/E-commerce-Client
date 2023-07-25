@@ -6,6 +6,9 @@
   align-items: center;
 }
 
+.contact {
+  z-index: 1;
+}
 .quickbuy {
   margin: 0rem 25rem 0rem 2rem;
 }

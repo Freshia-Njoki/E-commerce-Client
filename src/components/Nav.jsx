@@ -11,18 +11,15 @@ function Nav() {
 
     const aboutContent = (
         <div className="dropdown-menu">
-            <h4>Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus inventore corporis tenetur quod odit repellendus?
-            </p>
+            <span>CustomersOrders, PaymentDiscounts.</span>
 
         </div>
     );
 
     const contactUSContent = (
         <div className="dropdown-menu">
-            <h4>Lorem ipsum dolor.</h4>
-            <li>Lorem ipsum dolor sit.</li>
-            <li>Lorem ipsum dolor sit.</li>
+            <span>orders or inquiries.</span>
+
         </div>
     );
 

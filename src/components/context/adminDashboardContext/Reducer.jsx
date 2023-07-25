@@ -3,34 +3,34 @@ const Reducer = (state, action) => {
         case "MINIDASHBOARD":
             return {
                 ui: action.payload
-            }
+            };
         case "ORDERS":
             return {
                 ui: action.payload
-            }
+            };
         case "PRODUCTS":
             return {
                 ui: action.payload
-            }
+            };
         case "MARKETING":
             return {
                 ui: action.payload
-            }
+            };
         case "RATES":
             return {
                 ui: action.payload
-            }
+            };
         case "REPORTS":
             return {
                 ui: action.payload
-            }
+            };
         case "LOGOUT":
             return {
-                ui: action.payload
-            }
-
+                ui: null
+            };
         default:
             return state;
     }
-}
+};
+
 export default Reducer;

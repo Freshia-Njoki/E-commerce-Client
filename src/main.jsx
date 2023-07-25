@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { ContextProvider } from './components/context/userContext/Context.jsx'
+import { ProvideContext } from './components/context/adminContext/Context.jsx'
 import { UIContextProvider } from './components/context/UserDashboardContext/Context.jsx'
 import { ContextProvide } from './components/context/adminDashboardContext/Context.jsx'
 import { Elements } from '@stripe/react-stripe-js';
@@ -16,15 +17,19 @@ const stripePromise = loadStripe('pk_test_51NVI3GJLwJLu0JfmUJR4YAk3YfKnY3WEn5z0B
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
   <ContextProvider>
-    <UIContextProvider>
-      <ContextProvide>
-        <Elements stripe={stripePromise}>
-          <App />
-        </Elements>
-        <ToastContainer />
-      </ContextProvide>
-    </UIContextProvider>
-  </ContextProvider>
+
+    <ProvideContext>
+      <UIContextProvider>
+        <ContextProvide>
+          <Elements stripe={stripePromise}>
+            <App />
+          </Elements>
+          <ToastContainer />
+        </ContextProvide>
+      </UIContextProvider>
+    </ProvideContext>
+
+  </ContextProvider >
 
   //  </React.StrictMode> 
 )

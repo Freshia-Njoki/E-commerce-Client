@@ -50,7 +50,6 @@ export default function MainNav() {
                         )
                             : ui === 'logout' ? (
                                 <div className='container'>
-
                                     <Logout />
                                 </div>
                             ) :

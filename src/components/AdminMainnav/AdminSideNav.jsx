@@ -1,9 +1,11 @@
 import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import { Context } from '../../components/context/adminDashboardContext/Context';
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function AdminSideNav() {
     const { dispatch } = useContext(Context);
+    const navigate = useNavigate();
 
     const handleMinidashboard = () => {
         dispatch({ type: 'MINIDASHBOARD', payload: 'minidashboard' })
@@ -31,9 +33,9 @@ function AdminSideNav() {
 
     }
     const handleLogout = () => {
-        dispatch({ type: 'LOGOUT', payload: 'logout' })
-
-    }
+        dispatch({ type: 'LOGOUT' });
+        navigate('/login');
+    };
     return (
         <div >
             <Sidebar className='sidebar' >
@@ -54,7 +56,7 @@ function AdminSideNav() {
                     <MenuItem className="menu" onClick={handleMarketing}>Marketing </MenuItem>
                     <MenuItem className="menu" onClick={handleRates}>Rates </MenuItem>
                     <MenuItem className="menu" onClick={handleReports}>Reports </MenuItem>
-                    <MenuItem className="menu" onClick={handleLogout}>Logout </MenuItem>
+                    <MenuItem className="menu" onClick={handleLogout}>Logout</MenuItem>
 
                 </Menu>
             </Sidebar>
