@@ -9,7 +9,10 @@
   margin: 0.2rem;
   color: white;
 }
-
+.graph-container {
+  display: flex;
+  flex-direction: row;
+}
 .cards {
   color: black;
   margin: 3rem;
@@ -22,4 +25,8 @@
   margin: 2rem;
 
   margin-left: 10rem;
+}
+
+.flex {
+  margin: 2rem;
 }
