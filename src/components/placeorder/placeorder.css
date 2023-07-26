@@ -11,7 +11,16 @@
   padding-top: 5px;
   align-items: center;
 }
+.lipa {
+  height: 85vh;
+}
 
+.item-details {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 1rem;
+  flex-direction: row;
+}
 .mini-nav {
   display: flex;
   justify-content: space-between;

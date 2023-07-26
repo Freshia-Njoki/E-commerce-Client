@@ -120,7 +120,13 @@ function Products() {
                                 <label htmlFor="Quantity">Quantity</label><br />
                                 <input type="number" label="Quantity" id="quantity"  {...register('quantity')} /> <br />
                                 <label htmlFor="Category">Category</label><br />
-                                <input type="text" label="Category" id="Category" {...register('category')} /><br />
+                                <select id="Category" {...register('category')}>
+                                    <option value="Shoes">Shoes</option>
+                                    <option value="Clothes">Clothes</option>
+                                    <option value="Bags">Bags</option>
+                                    <option value="Beauty">Beauty</option>
+                                </select>
+
                                 <button type="submit">Upload</button>
                             </form>
                         </div>
