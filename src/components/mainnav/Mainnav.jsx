@@ -16,7 +16,7 @@ export default function MainNav() {
         <div className="mainnav">
             {ui === 'buy' ? (
                 <div className="mainnav_wrapper">
-                    <h2>Quickbuy</h2>
+                    {/* <h2>Quickbuy</h2> */}
                     <Products />
                 </div>
             ) :

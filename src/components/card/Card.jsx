@@ -17,7 +17,7 @@ function Card({ img, productName, price, description, handleClick }) { // Receiv
                 <p>price: {price}</p>
             </div>
 
-            <button onClick={handleClick}>ADD TO CART</button> {/* Attach the handleClick function to the button click event */}
+            <button onClick={handleClick} style={{ backgroundColor: 'green', border: 'none', padding: '5px', color: 'white' }}>ADD TO CART</button> {/* Attach the handleClick function to the button click event */}
         </div>
     );
 }

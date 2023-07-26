@@ -25,11 +25,13 @@ function Rates() {
                     <div key={shippingItem.id} className="card">
 
 
-                        <span className="cards">Shipping rate:{shippingItem.shippingRate}</span>
+                        <div className="shipping-data">
+                            <span className="data">Shipping rate:{shippingItem.shippingRate}</span>
 
-                        <span className="cards">Shipping method:{shippingItem.shippingMethod}</span>
+                            <span className="data">Shipping method:{shippingItem.shippingMethod}</span>
 
-                        <span className="cards">Delivery timeframe: {shippingItem.deliveryTimeframe}</span>
+                            <span className="data">Delivery timeframe: {shippingItem.deliveryTimeframe}</span>
+                        </div>
 
 
                     </div>

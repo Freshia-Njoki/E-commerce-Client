@@ -21,10 +21,10 @@ function order() {
 
     return (
         <div className='order-page'>
-            <div className="navbar">
+            {/* <div className="navbar">
                 <BsArrowLeftCircle style={{ width: '32px', height: '30px' }} />
                 <h3 style={{ marginLeft: "30%" }}>Order Updates</h3>
-            </div>
+            </div> */}
 
             <div className='order'>
                 <h3>System cancel order</h3>

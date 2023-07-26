@@ -1,15 +1,17 @@
-import Sidenav from '../../components/Sidenav'
+import React, { useState } from 'react';
 import { BiHelpCircle } from 'react-icons/bi';
 import { FiLogOut } from 'react-icons/fi';
 import './dashboard.css';
 import { Link } from 'react-router-dom';
-import Mainnav from '../mainnav/Mainnav';
+import Sidenav from '../Sidenav/Sidenav';
+import MainNav from '../mainnav/MainNav';
+
 function Dashboard() {
+    const [selectedCategory, setSelectedCategory] = useState('');
 
     return (
-
         <>
-            <div className="navbar">
+            <div className="navbarr">
                 <h3>Our Products</h3>
                 <div className="search">
                     <input
@@ -39,10 +41,9 @@ function Dashboard() {
             </div>
 
             <div className="display">
-                <Sidenav />
+                <Sidenav setSelectedCategory={setSelectedCategory} />
 
-                <Mainnav />
-
+                <MainNav selectedCategory={selectedCategory} />
             </div>
         </>
     );

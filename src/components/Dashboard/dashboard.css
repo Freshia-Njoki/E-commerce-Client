@@ -1,9 +1,10 @@
-.navbar {
+.navbarr {
   display: flex;
   flex-direction: row;
   height: 10vh;
   place-items: center;
   gap: 10px;
+  margin-left: 10px;
 }
 
 .navbar h3 {

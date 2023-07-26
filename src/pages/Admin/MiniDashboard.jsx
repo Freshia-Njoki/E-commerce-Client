@@ -75,13 +75,15 @@ function minidashboard() {
                     <div className="statistics">
                         <div className="balance">
                             <h5>Total Revenue</h5>
-                            <span className='cards' style={{ backgroundColor: 'aqua' }}>{totalRevenue ? `$${totalRevenue.toFixed(2)}` : 'Loading...'}</span>
-
+                            <div style={{ marginTop: '2rem' }}> <span className='cards' style={{ backgroundColor: 'aqua' }}>{totalRevenue ? `$${totalRevenue.toFixed(2)}` : 'Loading...'}</span>
+                            </div>
                         </div>
                         <div className="savings">
                             <h5>Total Savings</h5>
 
-                            <span className='cards' style={{ backgroundColor: 'aqua' }}> {totalSavings ? `$${totalSavings.toFixed(2)}` : 'Loading...'}</span>
+                            <div style={{ marginTop: '2rem' }}>
+                                <span className='cards' style={{ backgroundColor: 'aqua' }}> {totalSavings ? `$${totalSavings.toFixed(2)}` : 'Loading...'}</span>
+                            </div>
                         </div>
                     </div>
                     <div className="graph">

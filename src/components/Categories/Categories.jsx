@@ -17,7 +17,7 @@ function Categories() {
         <div>
             <div className="categories-content">
                 <div>
-                    <Sidebar className='sidebar'>
+                    <Sidebar style={{ height: '80vh' }}>
                         <Menu menuItemStyles={{
                             button: {
                                 // the active class will be added automatically by react router
@@ -50,13 +50,13 @@ function Categories() {
                             >
                                 Clothes
                             </MenuItem>
-                            <MenuItem
+                            {/* <MenuItem
                                 className="menu"
                                 active={selectedCategory === 'Accessories'}
                                 onClick={() => handleCategoryClick('Accessories')}
                             >
                                 Accessories
-                            </MenuItem>
+                            </MenuItem> */}
                             <MenuItem
                                 className="menu"
                                 active={selectedCategory === 'Beauty'}
@@ -71,13 +71,13 @@ function Categories() {
                             >
                                 Bags
                             </MenuItem>
-                            <MenuItem
+                            {/* <MenuItem
                                 className="menu"
                                 active={selectedCategory === 'Others'}
                                 onClick={() => handleCategoryClick('Others')}
                             >
                                 Others
-                            </MenuItem>
+                            </MenuItem> */}
                         </Menu>
                     </Sidebar>
                 </div>

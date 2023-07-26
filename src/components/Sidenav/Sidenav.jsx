@@ -1,5 +1,5 @@
 import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
-import { Context } from '../components/context/UserDashboardContext/Context';
+import { Context } from '../context/UserDashboardContext/Context';
 import { useContext } from 'react';
 // import './Dashboard/dashboard.css'
 import { FaUserTie } from 'react-icons/fa'
@@ -32,7 +32,7 @@ function Sidenav() {
     }
     return (
         <div >
-            <Sidebar className='sidebar'>
+            <Sidebar style={{ height: '90vh' }}>
                 <Menu menuItemStyles={{
                     button: {
                         // the active class will be added automatically by react router
@@ -48,7 +48,7 @@ function Sidenav() {
                     <MenuItem className="menu" onClick={handleCategories}>Categories </MenuItem>
                     <MenuItem className="menu" onClick={handleOrder}>Order Management </MenuItem>
                     <MenuItem className="menu" onClick={handleCart}>Cart </MenuItem>
-                    <MenuItem className="menu" onClick={handleAccount}><FaUserTie className='icon' />Account </MenuItem>
+                    <MenuItem className="menu" onClick={handleAccount}><div style={{ display: 'flex', flexDirection: 'row' }}><FaUserTie className='icon' />Account</div> </MenuItem>
 
                 </Menu>
             </Sidebar>
